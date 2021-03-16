@@ -1,0 +1,12 @@
+
+
+.benefit-wraper {
+  padding: 32rpx 32rpx 0;
+  box-sizing: border-box;
+}
+.image {
+  width: 686rpx;
+  height: 156rpx;
+  background-size: cover;
+  box-shadow: 0 2px 12px 0 rgba(153, 153, 153, 0.11);
+}

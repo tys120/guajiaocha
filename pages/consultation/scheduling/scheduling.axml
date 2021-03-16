@@ -1,0 +1,42 @@
+<view>
+  <view class="my-user">
+    <view class="user">
+          <image class="user-img" src="{{userInfo.avtor}}" />
+          <view class="user-info">
+              <view class="user-num">{{userInfo.name}}</view>
+              <view class="user-desc">{{userInfo.goodAt}}</view>
+          </view>
+    </view>
+  </view>
+
+  <view class="dateBlock">
+    <view a:for="{{weekData}}" key="{{index}}">
+      <view class="week">{{item.week}}</view>
+      <view class="date {{activeTab===index?'activeTab':''}}" data-info="{{index}}" onTap="changeTab">{{item.date.substring(5)}}</view>
+    </view>
+  </view>
+
+  <view a:if="{{timeRange.length>0}}">
+    <view class="rowBlock" a:for="{{timeRange}}" key="{{index}}" onTap="chooseTime" data-index="{{index}}">
+      <view class="leftBlock">
+        <view class="top">
+          <view class="rang">{{item.range}}</view>
+          <view class="not">{{item.hasNot?'有号':'此时间段无号'}}</view>
+        </view>
+        <view class="bottom">{{item.time}}</view>
+      </view>
+      <view class="rightBlock">
+        <view>{{'￥'+item.money}}</view>
+        <view
+            class="am-list-arrow">
+            <am-icon type="right" 
+              color="#ccc" />
+          </view>
+      </view>
+    </view>
+  </view>
+
+  <view  a:if="{{timeRange.length===0}}" class="empty">
+    医生暂无排班
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "defaultTitle": "排班信息",
+  "usingComponents": {
+    "am-icon": "mini-ali-ui/es/am-icon/index"
+  }
+}

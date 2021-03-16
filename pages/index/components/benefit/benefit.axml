@@ -1,0 +1,5 @@
+<view>
+  <view class="benefit-wraper">
+    <image onTap="tapBanner" class="image" mode="" src="https://gw.alipayobjects.com/mdn/rms_815f8a/afts/img/A*6cEKRKv-2-gAAAAAAAAAAABkARQnAQ"/>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<view>
+  <view a:if="{{!spread}}" class="not_spread">
+    <view class="up_wraper">
+      <view class="not_spread_icon up_icon">上</view>
+      <view class="time"> {{steps[0].time}}</view>
+      <view class="name">{{steps[0].name}}</view>
+    </view>
+    <view class="spread_wraper" onTap="spread">
+      途径{{steps.length - 2}}站  展开全部站点
+      <image class="raw" src="https://gw.alipayobjects.com/mdn/rms_815f8a/afts/img/A*TZyQTKcHLOkAAAAAAAAAAABkARQnAQ"/>
+    </view>
+    <view class="off_wraper">
+      <view class="not_spread_icon off_icon">下</view>
+      <view class="time">{{steps[steps.length - 1].time}}</view>
+      <view class="name">{{steps[steps.length - 1].name}}</view>
+    </view>
+  </view>
+  <view a:if="{{spread}}" class="spread">
+    <view a:for="{{steps}}" class="item_wraper {{item.upbus || item.offbus ? 'flag':''}}">
+      <view class="dot {{item.upbus ? 'upbus': ''}} {{item.offbus ? 'offbus': ''}} {{item.stagement ? 'stagement' : ''}}">{{item.upbus ? "上": ""}}{{item.offbus ? "下": ""}}</view>
+      <view class="time {{item.upbus || item.offbus ? 'flag': ''}}">{{item.time}}</view>
+      <view class="name {{item.upbus || item.offbus ? 'flag': ''}}">{{item.name}}{{item.start ? '(始发站)' : ''}}{{item.end ? '(终点站)' : ''}}</view>
+      <view class="gap {{item.stagement || item.upbus ? 'stagement' : ''}} {{item.end ? 'end': ''}}"></view>
+    </view>
+  </view>
+</view>

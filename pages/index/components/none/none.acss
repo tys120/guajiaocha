@@ -1,0 +1,25 @@
+.none_wraper {
+  padding: 150rpx;
+  text-align: center;
+}
+.none_wraper image {
+  background-size: cover;
+  height: 156rpx;
+  width: 109rpx;
+  margin-bottom: 25rpx;
+}
+.none_wraper text {
+  font-size: 28rpx;
+  color: #999;
+}
+.button_wraper {
+  margin-top: 50rpx;
+}
+.button {
+  width: 238rpx;
+  height: 76rpx;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 76rpx;
+  margin: 0 auto;
+}

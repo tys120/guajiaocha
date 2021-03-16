@@ -1,0 +1,10 @@
+.traffic-offence-record-page {
+    background-color:rgb(242, 242, 242);
+    padding:16px 12px;
+    height:100vh;
+    box-sizing:border-box;
+}
+
+.traffic-offence-record-page > view {
+    margin-bottom:24rpx;
+}

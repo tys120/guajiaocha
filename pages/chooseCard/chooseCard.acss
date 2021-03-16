@@ -1,0 +1,36 @@
+.default{
+  padding:5px;
+  background-color: red;
+  color:#fff;
+  font-size:12px;
+}
+
+.btn{
+  width:85%;
+  margin:0 auto;
+  margin-top:15px;
+}
+.empty{
+  padding-top:15px;
+  text-align: center;
+}
+
+.am-card-thumb{
+  width:35px;
+  height:35px;
+  line-height:35px;
+  font-size:14px;
+  color:#4492ff;
+  text-align: center;
+  background-color: #fff;
+}
+.am-card-container{
+  border-radius: 0.2rem;
+  background-position: -0.16rem -0.16rem;
+  background-color:#4492ff;
+  height:140px;
+  padding-bottom:15px;
+}
+.am-card-title,.am-card-subtitle-text{
+  font-size:12px;
+}

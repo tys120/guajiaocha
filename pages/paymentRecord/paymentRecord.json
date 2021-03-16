@@ -1,0 +1,4 @@
+{
+  "usingComponents": {
+    "traffic-offence-record": "mashi-open-snippets/es/traffic-offence-record/index"
+  }}

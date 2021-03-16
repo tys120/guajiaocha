@@ -1,0 +1,23 @@
+.am-textarea-item {
+  padding-top: 12px;
+  position: relative;
+}
+
+.am-textarea-item .am-input-line {
+  align-items: flex-start;
+}
+
+.am-textarea-item .am-textarea-content {
+  flex: 1;
+  display: flex;
+  color: #000;
+  text-align: left;
+  font-size: 14px;
+}
+.count {
+  position: absolute;
+  right: 32rpx;
+  top: 25rpx;
+  font-size: 28rpx;
+  color: #D2D2D2;
+}

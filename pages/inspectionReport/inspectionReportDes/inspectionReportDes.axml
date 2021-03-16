@@ -1,0 +1,42 @@
+<view>
+  <view class="block">
+    <view class="row">
+      <view>{{"姓名:"+reportInfo.userName}}</view>
+      <view>{{"性别:"+reportInfo.userSex}}</view>
+      <view>{{"年龄:"+reportInfo.userAge}}</view>
+    </view>
+    <view class="row">
+      <view>{{"申请科室名称:"+reportInfo.departmentName}}</view>
+      <view>{{"申请医生:"+reportInfo.applyDoctorName}}</view>
+    </view>
+  </view>
+
+  <view class="block">
+    <view class="row">
+      <view>检查流水号</view>
+      <view>{{reportInfo.recordId}}</view>
+    </view>
+    <view class="row">
+      <view>诊断</view>
+      <view>{{reportInfo.diagnosis}}</view>
+    </view>
+     <view class="row">
+      <view>申请日期</view>
+      <view>{{reportInfo.applyDate}}</view>
+    </view>
+    <view class="spec">
+      <view onTap="openPDF">查看PDF报告</view>
+      <view onTap="openIMG">查看图片报告</view>
+    </view>
+  </view>
+
+  <view class="data" a:for="{{reportInfo.reportItemList}}">
+    <view class="title">{{item.itemName+" "}}
+    <text a:if="{{item.pnFlag==='NORMAL'}}" style="color:#21b382">(正常)</text>
+    <text a:if="{{item.pnFlag==='HIGH'}}" style="color:#f00">(高↑)</text>
+    <text a:if="{{item.pnFlag==='LOW'}}" style="color:#babd84">(低↓)</text>
+    </view>
+    <view>{{"参考值:"+item.reference}}</view>
+    <view>{{"结果"+item.txtVal}}</view>
+  </view>
+</view>

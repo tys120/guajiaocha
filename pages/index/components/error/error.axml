@@ -1,0 +1,8 @@
+<view>
+  <view class="error_wraper">
+    <image mode="scaleToFill" src="https://gw.alipayobjects.com/mdn/rms_815f8a/afts/img/A*b9MkTr8zSpIAAAAAAAAAAABkARQnAQ"/>
+    <view>
+      <text>请稍后哦, 马上回来</text>
+    </view>
+  </view>
+</view>

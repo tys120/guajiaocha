@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "选择就诊人",
+  "usingComponents":{
+    "list": "mini-ali-ui/es/list/index",
+    "list-item": "mini-ali-ui/es/list/list-item/index",
+     "am-icon": "mini-ali-ui/es/am-icon/index",
+     "card":"mini-ali-ui/es/card/index"
+  }}

@@ -1,0 +1,31 @@
+<view>
+  <view class="allBlock">
+      <view class="orderM">订单金额</view>
+      <view class="money">{{"￥"+orderInfo.totalAmt}}</view>
+      <view class="every">
+        <view>创建时间</view>
+        <view>{{orderInfo.time}}</view>
+      </view>
+      <view class="every">
+        <view>流水编号</view>
+        <view class="number">{{orderInfo.id}}</view>
+      </view>
+  </view>
+  <view class="middle">
+    <view class="every">
+      <view>医生</view>
+      <view>{{orderInfo.doctorName}}</view>
+    </view>
+    <view class="every">
+      <view>科室</view>
+      <view>{{orderInfo.deptName}}</view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="every">
+      <view>就诊人姓名</view>
+      <view>{{orderInfo.name}}</view>
+    </view>
+  </view>
+  <button onTap="onTest" type="primary" class="btn">自费结算 </button>
+</view>

@@ -1,0 +1,89 @@
+<view>
+  <view class="page-section">
+    <view class="page-section-demo">
+      <swiper 
+        style="height:150px;"
+        class="demo-swiper"
+        previousMargin="10px"
+        nextMargin="10px"
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}"
+        vertical="{{vertical}}"
+        interval="{{interval}}"
+        circular="{{circular}}"
+      >
+        <block a:for="{{background}}">
+          <swiper-item key="swiper-item-{{index}}">
+            <view class="swiper-item">
+            <image mode="scaleToFill" src="{{item}}"/>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+  <view>
+    <view class="hosService">医院服务</view>
+    <grid 
+    onGridItemClick="onItemClick" 
+    columnNum="{{4}}" list="{{list55}}" 
+    infinite="{{true}}" 
+    hasLine="{{true}}"
+    infiniteHeight="240rpx" 
+    />
+  </view>
+
+  <view  onTap="goMycard">
+    <view class="hosService spec">我的证件 <text>绑定本院就诊卡</text>
+    <am-icon type="right" 
+              color="#ccc" /></view>
+    <card thumb="{{userInfo.name}}"
+     title="{{userInfo.sex}}"
+     subTitle="{{userInfo.birthDay}}"
+     number="{{userInfo.cardNum.substr(0, 3) + '********' + userInfo.cardNum.substr(12)}}"
+     money="{{userInfo.balance}}"
+     expand
+     />
+  </view>
+
+  <view class="tipBlock">
+    <view class="hosService">提醒</view>
+    <view class="tip">
+      <view class="tipRow">
+        <view class="tiptit">预约编号</view>
+        <view>{{remind.orderId}}</view>
+      </view>
+      <view class="tipRow">
+        <view class="tiptit">就诊人</view>
+        <view>{{remind.userName}}</view>
+      </view>
+      <view class="tipRow">
+        <view class="tiptit">预约时间</view>
+        <view>{{remind.timeRange}}</view>
+      </view>
+      <view class="tipRow">
+        <view class="tiptit">医生</view>
+        <view>{{remind.doctorName}}</view>
+      </view>
+      <view class="tipRow">
+        <view class="tiptit">就诊科室</view>
+        <view>{{remind.depName}}</view>
+      </view>
+    </view>
+  </view>
+    
+  <view class="serviceBlock">
+    <view class="hosService serviceSpec">服务记录</view>
+    <view class="rowBlock" a:for="{{service}}" key="{{index}}" onTap="chooseTime" data-index="{{index}}">
+      <view class="leftBlock"><image mode="scaleToFill" src="{{item.icon}}"/> {{item.title}}</view>
+      <view class="rightBlock">
+        <view
+            class="am-list-arrow">
+            <am-icon type="right" 
+              color="#ccc" />
+          </view>
+      </view>
+    </view>
+  </view>
+</view>

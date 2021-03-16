@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "ticket-sale": "/components/ticket-sale/ticket-sell",
+    "tabs": "mini-antui/es/tabs/index",
+    "tab-content": "mini-antui/es/tabs/tab-content/index"
+  }
+}

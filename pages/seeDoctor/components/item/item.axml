@@ -1,0 +1,118 @@
+  <view a:for="{{tabs}}" class="item-container" >
+    <!-- 有颜色的卡片 -->
+    <view a:if="{{item.iscolorful}}"> 
+      <view class="top top-style1"  > 
+        <view class="top-time">
+          <view class="top-time-date top-time-date-style1">
+            {{item.date}}
+          </view>
+          <view class="top-time-time top-time-time-style1">
+            {{item.time}}发车
+          </view>
+        </view>
+        <view class="top-time-status top-time-status-style1">
+          {{item.status}}
+        </view>
+      </view>
+
+      <view class="bottom">
+        <view class="bottom-top bottom-top-style1">
+          {{item.interval}}·{{item.cartype}}
+          {{item.from}}
+          <image class="bottom-img" src="https://gw.alipayobjects.com/mdn/rms_cd276b/afts/img/A*NvgmRqLRF7EAAAAAAAAAAABkARQnAQ" />
+          {{item.to}}
+        </view> 
+        <view class="bottom-bottom">
+          <view class="bottom-left">
+            <view class="bottom-left-up bottom-left-up-style1" >
+             上   
+            </view> 
+            <view class="left-line">
+            </view> 
+            <view class="bottom-left-down bottom-left-down-style1" >
+             下
+            </view> 
+          </view> 
+          <view class="bottom-right">
+            <view class="bottom-right-start">
+              <view class="bottom-right-start-startat bottom-right-start-startat-style1">
+                     {{item.startat}} 
+              </view> 
+              <view class="bottom-right-start-start bottom-right-start-start-style1">
+                     {{item.start}}
+              </view> 
+              </view> 
+              <view class="bottom-right-end">
+                  <view class="bottom-right-end-endat bottom-right-end-endat-style1">
+                     {{item.endat}} 
+                  </view> 
+                  <view class="bottom-right-end-end bottom-right-end-end-style1">
+                     {{item.end}}
+                  </view> 
+            </view> 
+          </view> 
+      
+        </view> 
+      </view>
+
+    </view>
+
+
+    <!-- 没有颜色的卡片 -->
+    <view a:else>     
+      <view class="top top-style2"  > 
+        <view class="top-time">
+          <view class="top-time-date top-time-date-style2">
+            {{item.date}}
+          </view>
+          <view class="top-time-time top-time-time-style2">
+            {{item.time}}发车
+          </view>
+        </view>
+        <view class="top-time-status top-time-status2">
+          {{item.status}}
+        </view>
+      </view>
+
+      <view class="bottom">
+        <view class="bottom-top bottom-top-style2">
+          {{item.interval}}·{{item.cartype}}
+          {{item.from}}
+          <image class="bottom-img" src="https://gw.alipayobjects.com/mdn/rms_cd276b/afts/img/A*NvgmRqLRF7EAAAAAAAAAAABkARQnAQ" />
+          {{item.to}}
+        </view> 
+        <view class="bottom-bottom">
+          <view class="bottom-left">
+            <view class="bottom-left-up bottom-left-up-style2" >
+             上   
+            </view> 
+            <view class="left-line">
+            </view> 
+            <view class="bottom-left-down bottom-left-down-style2" >
+             下
+            </view> 
+          </view> 
+          <view class="bottom-right">
+            <view class="bottom-right-start">
+              <view class="bottom-right-start-startat bottom-right-start-startat-style2">
+                     {{item.startat}} 
+              </view> 
+              <view class="bottom-right-start-start bottom-right-start-start-style2">
+                     {{item.start}}
+              </view> 
+              </view> 
+              <view class="bottom-right-end">
+                  <view class="bottom-right-end-endat bottom-right-end-endat-style2">
+                     {{item.endat}} 
+                  </view> 
+                  <view class="bottom-right-end-end bottom-right-end-end-style2">
+                     {{item.end}}
+                  </view> 
+            </view> 
+          </view> 
+      
+        </view> 
+        
+      </view>
+</view>
+

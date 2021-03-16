@@ -1,0 +1,13 @@
+  <view class="route-container">
+    <view class="route-line"></view>
+    <view class="row">
+      <text class="from-icon {{type === 'new' ? 'noTime': ''}}">上</text>
+      <text a:if="{{type !== 'new'}}" class="time">{{ from.time }}</text>
+      <text class="place">{{ from.place }}</text>
+    </view>
+    <view class="row">
+      <text class="dest-icon {{type === 'new' ? 'noTime': ''}}">下</text>
+      <text a:if="{{type !== 'new'}}" class="time">{{ dest.time }}</text>
+      <text class="place">{{ dest.place }}</text>
+    </view>
+  </view>

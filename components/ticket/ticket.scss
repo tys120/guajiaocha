@@ -1,0 +1,145 @@
+
+$ticket-space: 32rpx;
+
+.ticket-container {
+  box-shadow: 0 2px 12px 0 rgba(153,153,153,0.11);
+  border-radius: 4rpx;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+
+
+  .ticket-dot {
+    border-radius: 100%;
+    background: #FBFBFB;
+    width: 25rpx;
+    height: 25rpx;
+    position:absolute;
+    top: 70rpx;
+    &.left {
+      left: -16rpx;
+    }
+    &.right {
+      right: -16rpx;
+    }
+  }
+
+  .content {
+    margin: 36rpx 32rpx;
+    background-color: #fff;
+    .ticket-summary {
+      font-size: 13px;
+      color: #999;
+    }
+
+    .route-detail {
+      position: relative;
+      margin-top: 34rpx;
+      .route-line {
+        position: absolute;
+        width: 2px;
+        height: 34rpx;
+        background-color: #D8D8D8;
+        left: 10rpx;
+        top: 32rpx;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 28rpx;
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .from-icon {
+          font-size: 6px;
+          background-color: #0dc46e;
+          color: #fff;
+          padding: 6rpx;
+          border-radius: 100%;
+          font-weight: bolder;
+        }
+
+        .time {
+          font-size: 13px;
+          color: #999;
+          margin: 0 16rpx;
+          font-weight: bold;
+        }
+        .place {
+          color: #333333;
+          font-size: 15px;
+          font-family: PingFangSC-Medium;
+          color: #333333;
+          letter-spacing: 0;
+        }
+        .dest-icon {
+          font-size: 6px;
+          background-color: #f03637;
+          color: #fff;
+          padding: 6rpx;
+          border-radius: 100%;
+          font-weight: bolder;
+        }
+      }
+
+    }
+  }
+
+  &:after {
+    content: ' ';
+    display: block;
+    height: 1px;
+  }
+
+  &.finish, &.refund {
+    .top-bar {
+      background: #F1F1F1;
+      border-bottom: 1rpx dashed #FAFAFA;
+
+      .ticket-time, .ticket-extra {
+        color: #999;
+      }
+    }
+
+    .content {
+      .ticket-summary {
+        opacity: 0.8;
+      }
+      .route-detail {
+        .row {
+          .place, .time{
+            color: #9a9a9a;
+          }
+          
+          .from-icon, .dest-icon {
+            background-color: #B3B3B3;
+          }
+
+        }
+      }
+    }
+  }
+
+  .top-bar {
+    height: 84rpx;
+    background-color: #E4F3FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx dashed #E3E3E3;
+    .ticket-time {
+      color: #000;
+      margin-left: $ticket-space;
+    }
+
+
+    .ticket-extra {
+      color: #118EEA;
+      margin-right: $ticket-space;
+      font-family: PingFangSC-Medium;
+    }
+  }
+}
+
+

@@ -1,0 +1,86 @@
+.banner-container {
+  background-image: url(https://gw.alipayobjects.com/mdn/rms_cd276b/afts/img/A*PTxPRKE8HRsAAAAAAAAAAABkARQnAQ);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 346rpx;
+  overflow: visible;
+  position: relative;
+  margin-bottom: 70rpx;
+}
+
+.banner-container .user-route-container {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -70rpx;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  height: 218rpx;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+}
+
+.banner-container .user-route-container .user-route {
+  box-shadow: 0 2px 12px 0 rgba(153, 153, 153, 0.11);
+  border-radius: 4rpx;
+  background: #FFFFFF;
+  flex: 1;
+  display: flex;
+}
+
+.banner-container .user-route-container .user-route .from-to {
+  width: 82rpx;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.banner-container .user-route-container .user-route .from-to .route-line {
+  border-left: 5rpx dotted #EEEEEE;
+  height: 60rpx;
+  position: absolute;
+  left: 38rpx;
+  top: 68rpx;
+}
+
+.banner-container .user-route-container .user-route .from-to .from-wrap {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.banner-container .user-route-container .user-route .from-to .from-wrap .from, .banner-container .user-route-container .user-route .from-to .from-wrap .to {
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 100%;
+  background-color: #0DC46E;
+}
+
+.banner-container .user-route-container .user-route .from-to .from-wrap .to {
+  background-color: #F03637;
+}
+
+.banner-container .user-route-container .user-route .input-wrap {
+  background-color: #fff;
+  background: #FFFFFF;
+  flex: 1;
+}
+
+.banner-container .user-route-container .user-route .input-wrap .line-item {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+.banner-container .user-route-container .user-route .input-wrap .line-item .start {
+  font-size: 32rpx;
+}
+.banner-container .user-route-container .user-route .input-wrap .line-item .end {
+  font-size: 32rpx;
+  color: #C6C6C6;
+}
+
+.banner-container .user-route-container .user-route .input-wrap .line-item:last-child {
+  border: none;
+}

@@ -1,0 +1,79 @@
+.dateBlock{
+  display: flex;
+  width:90%;
+  margin:15px auto;
+  font-size:13px;
+  justify-content: space-between;
+}
+
+.week,.date{
+  border:1px solid #ccc;
+  padding:3.4px;
+}
+.week{
+  background-color: #ccc;
+}
+
+.activeTab{
+  background:#0bd;
+}
+
+.rowBlock{
+  padding:5px 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size:14px;
+  border-top:1px solid #ccc;
+}
+.rowBlock image{
+  width:40px;
+  height:40px;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.leftBlock{
+  width:70%;
+  font-size:15px;
+  display: flex;
+  align-items: center;
+}
+.leftBlock .top{
+  display: flex;
+  margin-bottom:5px;
+  flex-direction: column;
+  width:100%;
+}
+.bottom{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  width:100%;
+  color:#ccc;
+}
+.not{
+  padding:3px;
+  background:#0bd;
+  margin-left:5px;
+  font-size:12px;
+  border-radius: 5px;
+  color: #fff;
+}
+.rightBlock{
+  display: flex;
+  justify-content: flex-end;
+  padding-right:15px;
+  align-items: center;
+  color:#d1d1d1;
+  flex-shrink: 0;
+  width:30%;
+}
+.rightBlock view{
+  
+  margin-left:10px;
+}
+
+.empty{
+  padding-top:15px;
+  text-align: center;
+}

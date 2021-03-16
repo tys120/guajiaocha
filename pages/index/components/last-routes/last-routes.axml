@@ -1,0 +1,9 @@
+<view class="last-route-container">
+  <view class="last-route">
+    <view class="main-title">最近行程</view>
+    <view class="extra-action" onTap="getMore">更多</view>
+  </view>
+  <view class="ticket-wrap">
+    <ticket go="ticket" />
+  </view>
+</view>

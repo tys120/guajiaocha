@@ -1,0 +1,32 @@
+<view>
+  <view class="Department">
+    <view class="all-tit">门诊中心</view>
+    <grid 
+      onGridItemClick="onItemClickOne"
+      columnNum="{{3}}" list="{{Departmentlist}}" 
+      infinite="{{true}}" 
+      circular="{{true}}" 
+      infiniteHeight="240rpx" 
+      />
+  </view>
+  <view class="Department">
+    <view class="all-tit">住院中心</view>
+    <grid 
+      onGridItemClick="onItemClickTwo" 
+      columnNum="{{3}}" list="{{hospitlist}}" 
+      infinite="{{true}}" 
+      circular="{{true}}" 
+      infiniteHeight="240rpx" 
+      />
+  </view>
+  <view class="Department">
+    <view class="all-tit">体检中心</view>
+    <grid 
+      onGridItemClick="onItemClickThree" 
+      columnNum="{{3}}" list="{{physicallist}}" 
+      infinite="{{true}}" 
+      circular="{{true}}" 
+      infiniteHeight="240rpx" 
+      />
+  </view>
+</view>

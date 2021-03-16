@@ -1,0 +1,14 @@
+.error_wraper {
+  padding: 150rpx;
+  text-align: center;
+}
+.error_wraper image {
+  background-size: cover;
+  height: 156rpx;
+  width: 109rpx;
+  margin-bottom: 25rpx;
+}
+.error_wraper text {
+  font-size: 28rpx;
+  color: #999;
+}

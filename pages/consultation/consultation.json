@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "在线挂号",
+  "usingComponents": {
+    "vtabs": "mini-ali-ui/es/vtabs/index",
+    "vtab-content": "mini-ali-ui/es/vtabs/vtab-content/index",
+    "list": "mini-ali-ui/es/list/index",
+    "list-item": "mini-ali-ui/es/list/list-item/index"
+  }
+}

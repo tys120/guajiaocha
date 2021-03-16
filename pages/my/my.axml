@@ -1,0 +1,35 @@
+<view class="my">
+  <view class="my-user">
+    <view class="user">
+          <image class="user-img" src="https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png" />
+          <view class="user-info">
+              <view class="user-num">{{userInfo.name || "请添加就诊人信息"}}</view>
+              <view class="user-desc">{{userInfo.tel}}</view>
+          </view>
+         
+    </view>
+  </view>
+  
+  <grid 
+    onGridItemClick="searchTo" 
+    columnNum="{{5}}" list="{{serviceList}}" 
+    infinite="{{true}}" 
+    circular="{{true}}" 
+    infiniteHeight="240rpx" 
+    class="grid"
+    />
+
+  <list>
+    <block a:for="{{items2}}">
+      <list-item
+        arrow="{{true}}" 
+        onClick="searchTo" 
+        index="items2-{{index}}" 
+        key="items2-{{index}}" 
+        data-filed="{{item.path}}" 
+        last="{{index === (items2.length - 1)}}">
+        {{item.title}}
+      </list-item>
+    </block>
+  </list>
+</view>

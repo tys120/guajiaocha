@@ -1,0 +1,38 @@
+page{
+  background-color: #f5f5f5;
+}
+
+.block{
+  background:#fff;
+  margin-top:15px;
+  padding:0 10px;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  padding:10px 0;
+}
+
+.data{
+  margin-top:15px;
+}
+.data view{
+  padding:10px;
+}
+
+.title{
+  background:#fff;
+}
+
+.spec{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.spec view{
+  margin-right: 15px;
+  font-size: 14px;
+  color:#ccc;
+  padding:10px;
+}

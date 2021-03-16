@@ -1,0 +1,35 @@
+<view>
+  <view class="allBlock">
+  <view class="row picBlock">
+    <image mode="scaleToFill" src="{{doctorInfo.avtor}}"/>
+  </view>
+  <view class="row">
+    <view class="tit">姓名</view>
+    <view>{{doctorInfo.name}}</view>
+  </view>
+  <view class="row">
+    <view class="tit">性别</view>
+    <view>{{doctorInfo.sex}}</view>
+  </view>
+  <view class="row">
+    <view class="tit">职称</view>
+    <view>{{doctorInfo.zhiwei}}</view>
+  </view>
+  <view class="row">
+    <view class="tit">科室</view>
+    <view>{{doctorInfo.keshi}}</view>
+  </view>
+  <view class="row">
+    <view class="tit">从业时间</view>
+    <view>{{doctorInfo.workData}}</view>
+  </view>
+  <view class="row spec">
+    <view class="Rowtit">专长</view>
+    <view>{{doctorInfo.goodAt}}</view>
+  </view>
+  <view class="row spec">
+    <view class="Rowtit">简介</view>
+    <view>{{doctorInfo.des}}</view>
+  </view>
+  </view>
+</view>

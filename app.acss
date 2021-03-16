@@ -1,0 +1,7 @@
+page {
+  background: #FFF;
+}
+@font-face {
+  font-family: "AlipayNumber-Regular";
+  src: url("https://gw.alipayobjects.com/as/g/antui/antui-static/1.0.3/fonts/AlipayNumber-Regular.ttf") format("truetype");
+}

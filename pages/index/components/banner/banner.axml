@@ -1,0 +1,25 @@
+<view class="banner-container">
+  <view class="user-route-container">
+    <view class="user-route">
+      <view class="from-to">
+        <view class="from-wrap">
+          <view class="from"></view>
+        </view>
+        <view class="from-wrap">
+          <view class="to"></view>
+        </view>
+        <view class="route-line"></view>
+      </view>
+      <view class="input-wrap">
+        <view class="line-item" onTap="goStartSelect">
+          <!-- <input class="input" value="" /> -->
+          <text class="start">{{start.text}}</text>
+        </view>
+        <view class="line-item" onTap="goEndSelect">
+          <text class="end">{{end.text}}</text>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+</view>

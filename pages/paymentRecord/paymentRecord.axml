@@ -1,0 +1,5 @@
+<view class="traffic-offence-record-page">
+    <view>
+        <traffic-offence-record a:for="{{item1}}" data="{{item}}" onDetail="onClickDetail"/>
+    </view>
+</view>

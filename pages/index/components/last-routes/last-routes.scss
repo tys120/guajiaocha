@@ -1,0 +1,26 @@
+.last-route-container{
+  margin: 0 32rpx;
+  .last-route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 44rpx 0 24rpx;
+    .main-title {
+      font-family: PingFangSC-Medium;
+      letter-spacing: 0;
+      color: #333;
+      font-size: 16px;
+    }
+    .extra-action {
+      font-family: PingFangSC-Regular;
+      font-size: 13px;
+      color: #999999;
+    }
+  }
+
+
+  .ticket-wrap {
+    
+    
+  }
+}

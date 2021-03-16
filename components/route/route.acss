@@ -1,0 +1,64 @@
+.route-container {
+  position: relative;
+  margin-top: 34rpx;
+}
+
+.route-container .route-line {
+  position: absolute;
+  width: 2px;
+  height: 39rpx;
+  background-color: #D8D8D8;
+  left: 10rpx;
+  top: 30rpx;
+}
+
+.route-container .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28rpx;
+}
+
+.route-container .row:last-child {
+  margin-bottom: 0;
+}
+
+.route-container .row .from-icon {
+  font-size: 12.8rpx;
+  background-color: #0dc46e;
+  color: #fff;
+  width: 24rpx;
+  height: 24rpx;
+  text-align: center;
+  line-height: 24rpx;
+  border-radius: 50%;
+}
+.route-container .row .from-icon.noTime {
+  margin-right: 24rpx;
+}
+
+.route-container .row .time {
+  font-size: 26rpx;
+  font-family: AlipayNumber-Regular;
+  color: #999;
+  margin: 0 16rpx;
+}
+
+.route-container .row .place {
+  color: #333333;
+  font-size: 15px;
+  font-family: PingFangSC-Medium;
+  color: #333333;
+  letter-spacing: 0;
+}
+
+.route-container .row .dest-icon {
+  font-size: 6px;
+  background-color: #f03637;
+  color: #fff;
+  padding: 6rpx;
+  border-radius: 100%;
+  font-weight: bold;
+}
+.route-container .row .dest-icon.noTime {
+  margin-right: 24rpx;
+}

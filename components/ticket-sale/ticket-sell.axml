@@ -1,0 +1,39 @@
+<view class="ticket-sell-container">
+  <view catchTap="goToDetail">
+    <view class="ticket-summary">
+      <text class="time">早</text>
+      <text class="time">·S100</text>
+      <text class="tip hot">曾经买过</text>
+    </view>
+    <view class="route-detail">
+      <view class="route-line"></view>
+      <view class="row">
+        <text class="from-icon">上</text>
+        <text class="time">14:20</text>
+        <text class="place">德力西大楼</text>
+      </view>
+      <view class="row">
+        <text class="dest-icon">下</text>
+        <text class="time">16:20</text>
+        <text class="place">萧山机场</text>
+      </view>
+    </view>
+    <view class="sep-line"></view>
+    <view class="action-bar">
+      <view class="price-wap">
+        <view class="price">
+          <text class="number">22.50</text>
+          <text class="unit">元</text>
+        </view>
+        <view class="origin-price">
+          <text class="number">22.50</text>
+          <text class="unit">元</text>
+        </view>
+      </view>
+      <view>
+        <button a:if="{{type === 1}}" catchTap="goBuyTicket" class="buy-button" type="primary">购票</button>
+        <button a:if="{{type === 2}}" catchTap="goSeeTicket" class="see-button" type="primary">查看</button>
+      </view>
+    </view>
+  </view>
+</view>

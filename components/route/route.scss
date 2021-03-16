@@ -1,0 +1,50 @@
+.route-container {
+  position: relative;
+  margin-top: 34rpx; 
+  .route-line {
+    position: absolute;
+    width: 2px;
+    height: 34rpx;
+    background-color: #D8D8D8;
+    left: 10rpx;
+    top: 32rpx;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 28rpx;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .from-icon {
+      font-size: 6px;
+      background-color: #0dc46e;
+      color: #fff;
+      padding: 6rpx;
+      border-radius: 100%;
+      font-weight: bolder;
+    }
+
+    .time {
+      font-size: 13px;
+      color: #999;
+      margin: 0 16rpx;
+    }
+    .place {
+      color: #333333;
+      font-size: 15px;
+      font-family: PingFangSC-Medium;
+      color: #333333;
+      letter-spacing: 0;
+    }
+    .dest-icon {
+      font-size: 6px;
+      background-color: #f03637;
+      color: #fff;
+      padding: 6rpx;
+      border-radius: 100%;
+      font-weight: bolder;
+    }
+  }
+}

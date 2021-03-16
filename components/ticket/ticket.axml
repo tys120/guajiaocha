@@ -1,0 +1,59 @@
+<view class="ticket-container {{ type }}" >
+  <view onTap="onTicketClick">
+    <view class="top-bar {{type === 'canceled' ? 'disabled' : ''}}">
+      <view a:if="{{ type === 'start' || type === 'finish' || type === 'refund'}}" class="ticket-time">
+        6月2日今天 09:00发车
+      </view>
+      <slot name="topExtra" a:if="{{ showTopExtra }}" ></slot>
+      <view class="ticket-extra" a:else>
+        {{ status }}
+      </view>
+    </view>
+    <view class="content">
+      <view class="ticket-summary" a:if="{{type !== 'ready'}}">
+        <text class="time">早</text>
+        <text class="time">·S100</text>
+        <text class="tip hot">曾经买过</text>
+      </view>
+      <view class="route-detail">
+        <view class="route-line"></view>
+        <view class="row">
+          <text class="from-icon">上</text>
+          <text class="time">14:20</text>
+          <text class="place {{type === 'canceled' ? 'disable': ''}}">德力西大楼</text>
+        </view>
+        <view class="row">
+          <text class="dest-icon">下</text>
+          <text class="time">16:20</text>
+          <text class="place {{type === 'canceled' ? 'disable': ''}}">萧山机场</text>
+        </view>
+      </view>
+    </view>
+    <view a:if="{{type === 'ready'}}" class="custom-wraper">
+      <view class="progress">
+        <view class="step" style="{{width: step/20 * 100 + '%'}}">{{step}}/20个</view>
+      </view>
+      <view class="info-wraper">
+        <view class="text">已有<text class="number">{{step}}</text>人参与定制</view>
+        <button class="button" type="primary" a:if="{{type !== 'ready'}}">参与定制</button>
+        <button class="button" type="primary" a:if="{{type === 'ready'}}" catchTap="onCancel">取消定制</button>
+      </view>
+    </view>
+    <view class="sep-line" a:if="{{type === 'already'}}"></view>
+    <view class="action-bar" a:if="{{type === 'already'}}">
+      <view class="price-wap">
+        <view class="price">
+          <text>22.50</text>
+          <text>元</text>
+        </view>
+        <view class="origin-price">
+          <text>22.50</text>
+          <text>元</text>
+        </view>
+      </view>
+      <view>
+        <button catchTap="goBuyTicket" class="buy-button" type="primary">购票</button>
+      </view>
+    </view>
+  </view>
+</view>

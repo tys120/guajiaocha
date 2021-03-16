@@ -1,0 +1,72 @@
+<view>
+  <!-- <view class="row">
+    <view  onTap="datePicker" data-type="start">开始时间：{{startTime.replace("-","/").replace("-","/")}}</view>
+    <view  onTap="datePicker" data-type="end">结束时间：{{endTime.replace("-","/").replace("-","/")}}</view>
+    <button size="default" type="primary">查询</button>
+  </view> -->
+  <!-- <collapse
+    className="collapse"
+    collapseKey="testReport"
+    activeKey="{{['item-0']}}"
+    accordion="{{true}}"
+  >
+    <collapse-item header="{{item.reportTime + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + item.doctorName + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + item.inspectName}}" itemKey="item-{{index}}" collapseKey="testReport" a:for="{{report}}" key="{{item.checkId}}" class="item">
+      <view>
+        <view class="contSty fb fc-04">
+          <text class="w45 tl">项目名称</text>
+          <text class="w15 tl">结果</text>
+          <text class="w10 tc">提示</text>
+          <text class="w30 tr">参考范围</text>
+        </view>
+      </view>
+      <view>
+        <view a:for="{{item.children}}" key="{{item.resultId}}" class="contSty">
+          <text class="w45">{{item.itemName}}</text>
+          <text class="w15">{{item.result}}</text>
+          <text class="w10">{{item.tip}}</text>
+          <text class="w30">{{item.refRange}}</text>
+        </view>
+      </view>
+      
+    </collapse-item>
+  </collapse>   -->
+  <scroll-view a:if="{{report.length>0}}">
+    <view class="showInfo" a:for="{{report}}" data-info="{{index}}" key="{{index}}" onTap="lookDescribe">
+      <view class="top">
+        <view>{{item.isFinish?"已出报告":"未出报告"}}</view>
+        <view>{{item.time}}</view>
+      </view>
+      <view class="middle">{{item.keshi}}</view>
+      <view class="bottom">
+        <view class="people">
+          <view>报告名称</view>
+          <view>{{item.reportName}}</view>
+        </view>
+        <view class="people">
+          <view>姓名</view>
+          <view>{{item.name}}</view>
+        </view>
+        <view class="people">
+          <view>流水号</view>
+          <view>{{item.number}}</view>
+        </view>
+        <view class="people">
+          <view>就诊卡卡号</view>
+          <view>{{item.cardNumber}}</view>
+        </view>
+        <view class="people">
+          <view>查看详情</view>
+          <view
+            class="am-list-arrow">
+            <am-icon type="right" 
+              color="#ccc" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view a:if="{{report.length===0}}" class="empty">
+    暂无检验报告
+  </view>
+</view>

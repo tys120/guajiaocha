@@ -1,0 +1,9 @@
+.all-tit{
+  font-size:16px;
+  font-weight:bolder;
+  margin-bottom: 10px;
+}
+
+.Department{
+  padding:10px;
+}

@@ -1,0 +1,54 @@
+.recommend-routes-container {
+  margin-top: 28rpx;
+  background: #FFF;
+}
+.ticket-sell-wrap {
+  padding: 16rpx 32rpx 0;
+}
+
+.recommend-routes-container .main-title {
+  font-family: PingFangSC-Medium;
+  letter-spacing: 0;
+  color: #333;
+  font-size: 16px;
+  margin: 44rpx 0 24rpx;
+}
+.tab-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 40rpx; */
+  /* 如果 swipeable="{{true}}"，需要增加 height */
+  /* height: 350px; */
+}
+.active_tabbar {
+  position: relative;
+  font-size: 32rpx!important;
+  font-weight: bold!important;
+  color: #000!important;
+}
+
+.active_tabbar::after {
+  content: '';
+  position: absolute;
+  width: 47rpx;
+  height: 6rpx;
+  background: #108ee9;
+  bottom: 0;
+  left: 38%;
+
+}
+
+.am-tabs-bar-title {
+  border-bottom: none;
+  font-size: 26rpx;
+  color: #999;
+
+}
+.am-tabs-bar-tab {
+  width: 180rpx!important;
+  text-align: center;
+}
+.am-tabs-scroll-left {
+  background: none;
+}

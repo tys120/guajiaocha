@@ -1,0 +1,23 @@
+<view>
+  <view class="row">
+    <view class="tit">医生姓名</view>
+    <view>{{userInfo.name}}</view>
+  </view>
+  <view class="row">
+    <view class="tit">就诊科室</view>
+    <view>{{userInfo.keshi}}</view>
+  </view>
+  <view class="row">
+    <view class="tit">就诊时段</view>
+    <view>{{time+'  ' +info.time}}</view>
+  </view>
+  <view class="row">
+    <view class="tit">挂号金额</view>
+    <view>{{info.money}}</view>
+  </view>
+  <view class="row">
+    <view class="tit">就诊人姓名</view>
+    <view>{{localName}}</view>
+  </view>
+   <button onTap="onTest" type="primary" class="btn">确认挂号 </button>
+</view>

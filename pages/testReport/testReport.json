@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "检验报告",
+  "usingComponents": {
+    "am-icon": "mini-ali-ui/es/am-icon/index",
+    "collapse": "mini-ali-ui/es/collapse/index",
+    "collapse-item": "mini-ali-ui/es/collapse/collapse-item/index"
+  }
+}

@@ -1,0 +1,29 @@
+<view>
+  <view class="dateBlock">
+    <view a:for="{{weekData}}" key="{{index}}">
+      <view class="week">{{item.week}}</view>
+      <view class="date {{activeTab===index?'activeTab':''}}" data-info="{{index}}" onTap="changeTab">{{item.date.substring(5)}}</view>
+    </view>
+  </view>
+
+  <view a:if="{{timeRange.length>0}}">
+    <view class="rowBlock" a:for="{{timeRange}}" key="{{index}}" onTap="chooseTime" data-index="{{index}}">
+      <view class="leftBlock">
+        <image mode="scaleToFill" src="{{item.avtor}}"/>
+        <view class="top">
+          <view class="rang">{{item.name}}</view>
+          <view class="">{{item.zhiwei}}</view>
+          <view class="bottom">{{item.goodAt}}</view>
+        </view>
+      </view>
+      <view class="rightBlock">
+        <view class="not">{{item.hasNot?'有号':'此时间段无号'}}</view>
+        <view
+            class="am-list-arrow">
+            <am-icon type="right" 
+              color="#ccc" />
+          </view>
+      </view>
+    </view>
+  </view>
+</view>

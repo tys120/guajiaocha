@@ -1,0 +1,30 @@
+.row{
+  display: flex;
+  padding:0 10px;
+  color:#d1d1d1;
+  line-height:30px;
+  border-top:1px solid #ccc;
+}
+.spec{
+  flex-direction: column;
+}
+.tit{
+  width:20%;
+  color:#000;
+}
+.Rowtit{
+  width:100%;
+  color:#000;
+}
+image{
+  width:100px;
+  height:150px;
+}
+.picBlock{
+  justify-content: space-around;
+  padding:10px 0;
+}
+
+.allBlock{
+  padding-bottom:50px;
+}

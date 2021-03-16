@@ -1,0 +1,10 @@
+{
+    "defaultTitle": "我的",
+    "transparentTitle": "auto",
+    "usingComponents": {
+      "grid":"mini-ali-ui/es/grid/index",
+      "pagination": "mini-ali-ui/es/pagination/index",
+      "list": "mini-ali-ui/es/list/index",
+      "list-item": "mini-ali-ui/es/list/list-item/index"
+    }
+}

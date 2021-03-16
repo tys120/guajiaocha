@@ -1,0 +1,35 @@
+page{
+  background-color: #f5f5f5;
+}
+
+.orderM{
+  text-align: center;
+  color:#ccc;
+  background-color: #fff;
+  font-size:13px;
+  padding-bottom:15px;
+}
+.money{
+  text-align: center;
+  font-size:20px;
+  background-color: #fff;
+}
+.every{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+}
+.middle,.bottom{
+  margin-top:10px;
+}
+
+.number{
+  font-size:13px;
+}
+
+.btn{
+  margin:0 auto;
+  margin-top:15px;
+  width:90%;
+}

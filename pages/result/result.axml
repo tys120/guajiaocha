@@ -1,0 +1,10 @@
+<view>
+  <message
+    title="{{title}}"
+    subTitle="{{subTitle}}"
+    type="{{type}}"
+    mainButton="{{mainButton}}" 
+    subButton="{{subButton}}" >
+  </message>
+  <button size="default" type="primary" onTap="goBack">返回</button>
+</view>

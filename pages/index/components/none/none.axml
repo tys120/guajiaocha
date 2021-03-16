@@ -1,0 +1,11 @@
+<view>
+  <view class="none_wraper">
+    <image mode="scaleToFill" src="https://gw.alipayobjects.com/mdn/rms_815f8a/afts/img/A*ba46S5YRM6wAAAAAAAAAAABkARQnAQ"/>
+    <view>
+      <text>还没有路线哦, 开始定制巴士吧!</text>
+    </view>
+    <view class="button_wraper">
+      <button class="button" size="small" type="primary">定制路线</button>
+    </view>
+  </view>
+</view>

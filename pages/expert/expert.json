@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "avatar": "mini-ali-ui/es/avatar/index"
+  }
+}

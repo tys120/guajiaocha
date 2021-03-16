@@ -1,0 +1,42 @@
+page{
+    background:#FAFAFA
+}
+.my-user{
+  height:320rpx;
+  width:100%;
+  position:relative;
+  background-image: url(https://gw.alipayobjects.com/mdn/rms_cd276b/afts/img/A*mC-hS5BvX8sAAAAAAAAAAABkARQnAQ);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.user{
+    position:absolute;
+    top:150rpx;
+    left:30rpx;
+    display:flex;
+}
+.user-img{
+    height:120rpx;
+    width:120rpx;
+}
+.user-info{
+    margin-left:32rpx;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    padding:12rpx 0 ;
+}
+.user-num{
+    font-family: PingFangSC-Medium;
+    font-size: 34rpx;
+    color: #FFFFFF;
+    letter-spacing: 0.55rpx;
+    text-align: left;
+}
+.user-desc{
+    font-family: PingFangSC-Regular;
+    font-size: 28rpx;
+    color: #FFFFFF;
+    letter-spacing: 0.45rpx;
+    text-align: left;
+}

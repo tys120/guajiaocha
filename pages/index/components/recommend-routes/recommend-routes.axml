@@ -1,0 +1,34 @@
+<view class="recommend-routes-container">
+  <tabs
+    tabs="{{tabs}}"
+    onTabClick="handleTabClick"
+    onChange="handleTabChange"
+    onPlusClick="handlePlusClick"
+    activeTab="{{activeTab}}"
+    swipeable="{{false}}"
+    className="tabs_wraper"
+    tabBarCls="tabs_tabbar"
+    activeCls="active_tabbar"
+  >
+    <block a:for="{{tabs}}">
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:if="{{index === 1}}">
+        <view class="ticket-sell-wrap">
+          <ticket-sale go="route" />
+          <ticket-sale go="route" />
+        </view>
+      </tab-content>
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:elif="{{index === 2}}">
+        <view class="ticket-sell-wrap">
+          <ticket-sale go="route" />
+          <ticket-sale go="route" />
+        </view>
+      </tab-content>
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:else>
+        <view class="ticket-sell-wrap">
+          <ticket-sale go="route" />
+          <ticket-sale go="route" />
+        </view>
+      </tab-content>
+    </block>
+  </tabs>
+</view>

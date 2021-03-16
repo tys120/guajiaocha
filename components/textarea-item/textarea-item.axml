@@ -1,0 +1,33 @@
+<view
+	class="am-input-item am-textarea-item {{last ? 'last': ''}} {{className}}"
+>
+	<view class="am-input-line">
+    <view a:if="{{$slots.$default}}" class="am-input-label {{labelCls}}">
+      <slot />
+    </view>
+    <textarea
+      enableNative="{{enableNative}}"
+      sync-input="{{syncInput}}"
+      class="am-textarea-content {{inputCls}}"
+      value="{{value}}"
+      name="{{name}}"
+      type="{{type}}"
+      show-count="{{false}}"
+      password="{{password}}"
+      placeholder="{{placeholder}}"
+      placeholderClass="{{placeholderClass}}"
+      placeholderStyle="{{placeholderStyle}}"
+      disabled="{{disabled}}"
+      maxlength="{{maxlength}}"
+      focus="{{focus}}"
+      onInput="onInput"
+      onConfirm="onConfirm"
+      onFocus="onFocus"
+      onBlur="onBlur"
+    />
+
+    <slot name="extra" />
+		<view class="am-input-line-bottom" />
+	</view>
+  <text class="count"> {{count}}/{{maxlength}}</text>
+</view>

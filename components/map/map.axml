@@ -1,0 +1,12 @@
+<view>
+  <map id="map" longitude="120.131441" latitude="30.279383" scale="{{scale}}" controls="{{controls}}"
+  onControlTap="controltap" markers="{{markers}}"
+  onMarkerTap="markertap"
+  polyline="{{polyline}}" circles="{{circles}}"
+  onRegionChange="regionchange"
+  onTap="tap"
+  style="{{mapStyle}}"
+  show-location
+  include-points="{{includePoints}}"></map>
+
+</view>

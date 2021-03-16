@@ -1,0 +1,117 @@
+<view class="page">
+  <form onSubmit="onSubmit" onReset="onReset">
+    <view class="page-section">
+    <view class="form-row">
+        <view class="form-row-label">就诊人姓名</view>
+        <view class="form-row-content">
+          <input name="input" onInput='bindInput' data-type="name" class="input" placeholder="请输入姓名" value="{{userInfo.name}}"/>
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">手机号</view>
+        <view class="form-row-content">
+          <input name="input" onInput='bindInput' data-type="tel" class="input" placeholder="请输入手机号"  value="{{userInfo.phoneNumber}}"/>
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">性别</view>
+        <view class="form-row-content">
+         <picker name="picker" onChange="bindObjPickerChange" value="{{sexIndex}}" range="{{sexList}}" range-key="name">
+          <view class="row">
+            <view class="row-extra">{{sexList[sexIndex].name}}</view>
+          </view>
+        </picker>
+        </view>
+      </view>
+      <!-- <view class="form-row">
+        <view class="form-row-label">邮箱</view>
+        <view class="form-row-content">
+          <input name="input" onInput='bindInput' data-type="email" class="input" placeholder="请输入邮箱"  value="{{userInfo.email}}"/>
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">婚姻状况</view>
+        <view class="form-row-content">
+          <picker name="picker" onChange="bindmaryPickerChange" value="{{marrayIndex}}" range="{{marrayList}}" range-key="name">
+          <view class="row">
+            <view class="row-extra">{{marrayList[marrayIndex].name}}</view>
+          </view>
+        </picker>
+        </view>
+      </view> -->
+      <view class="form-row">
+        <view class="form-row-label">出生日期</view>
+        <view class="form-row-content" onTap="datePicker" data-type="birth">
+        <!-- <input name="input" onTap="datePicker" data-type="start" class="input" placeholder="请选择出生日期"  value="{{userInfo.birthDay}}"/> -->
+          <input   placeholder="请选择出生日期" value="{{userInfo.birthDay}}" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">身份证号</view>
+        <view class="form-row-content">
+          <input name="input" onInput='bindInput' data-type="number" class="input" placeholder="请输入身份证"  value="{{userInfo.cardNum}}"/>
+        </view>
+      </view>
+      <view class="form-row" a:if="{{!isReset}}">
+        <view class="form-row-label">余额</view>
+        <view class="form-row-content">
+          <input name="input" disabled onInput='bindInput' data-type="number" class="input" value="{{userInfo.balance}}"/>
+        </view>
+      </view>
+      <!-- <view class="form-row">
+        <view class="form-row-label">地址选择</view>
+        <view class="form-row-content" onTap="chooseAddress">
+          <input name="input" class="input" placeholder="请选择地址"  value="{{userInfo.address}}"  />
+        </view>
+       <view class="address-picker" a:if="{{visible}}">
+          <view class="picker-box">
+            <view class="btn-box">
+              <text class="cancel-btn" catchTap="clickCancel">取消
+              </text>
+              <text class="confirm-btn" catchTap="clickConfirm">确定
+              </text>
+            </view>
+            <picker-view value="{{value}}" onChange="onChange">
+              <picker-view-column>
+                <view a:for="{{addressList}}" a:key="{{index}}">{{item.name}}        
+                </view>
+              </picker-view-column>
+              <picker-view-column>
+                <view a:for="{{addressList[value[0]].sublist}}" a:key="{{index}}">{{item.name}}        
+                </view>
+              </picker-view-column>
+              <picker-view-column>
+                <view a:for="{{addressList[value[0]].sublist[value[1]].sublist}}" a:key="{{index}}">{{item.name}}        
+                </view>
+              </picker-view-column>
+            </picker-view>
+          </view>
+        </view>
+      </view> 
+      <view class="form-row">
+        <view class="form-row-label">联系人姓名</view>
+        <view class="form-row-content">
+          <input name="input" onInput='bindInput' data-type="contentName" class="input" placeholder="请输入联系人姓名"  value="{{userInfo.contentName}}"/>
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">联系人电话</view>
+        <view class="form-row-content">
+          <input name="input" onInput='bindInput' data-type="contentTel" class="input" placeholder="请输入联系人电话"  value="{{userInfo.contentTel}}"/>
+        </view>
+      </view>-->
+      <!-- <view class="form-row">
+        <view class="form-row-label">是否默认</view>
+        <view class="form-row-content" style="text-align: left;padding-left:15px;">
+          <switch name="switch" checked="{{userInfo.isDefault}}" onChange="switchChange"/>
+        </view>
+      </view> -->
+      
+      <view class="page-section-btns">
+        <!-- <view><button type="ghost" formType="reset" class="btn" a:if="{{isReset}}">重置</button></view> -->
+        <view><button type="primary" formType="submit" class="btn">{{isReset?"创建电子就诊卡":"修改电子就诊卡"}}</button></view>
+        <view><button type="ghost" onTap="deleteData" class="btn" a:if="{{!isReset}}">删除</button></view>
+      </view>
+    </view>
+  </form>
+</view>

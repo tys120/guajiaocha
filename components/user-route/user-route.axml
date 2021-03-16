@@ -1,0 +1,30 @@
+<view class="user-route-container">
+  <view class="user-route">
+    <view class="from-to">
+      <view class="from-wrap">
+        <view class="from"></view>
+      </view>
+      <view class="from-wrap">
+        <view class="to"></view>
+      </view>
+      <view class="route-line"></view>
+    </view>
+    <view class="input-wrap">
+      <view class="line-item">
+        <input class="input" value="{{ from }}" />
+      </view>
+      <view class="line-item">
+        <input class="input" value="{{ dest }}" />
+      </view>
+    </view>
+    <view class="switch-wrap">
+      <image 
+        src="https://gw.alipayobjects.com/mdn/rms_cd276b/afts/img/A*rDtJTK-qYCIAAAAAAAAAAABkARQnAQ" 
+        mode="aspectFit"
+        class="icon"
+        onTap="onSwitch"
+      />
+    </view>
+  </view>
+  
+</view>

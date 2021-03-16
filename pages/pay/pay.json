@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "defaultTitle": "门诊缴费",
+  "usingComponents": {
+    "am-icon": "mini-ali-ui/es/am-icon/index"
+  }
+}

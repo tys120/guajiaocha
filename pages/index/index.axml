@@ -1,0 +1,55 @@
+<view>
+  <view class="kong"></view>
+  <view class="page-section">
+    <view class="page-section-demo">
+      <swiper 
+        style="height:150px"
+        class="demo-swiper"
+        previousMargin="10px"
+        nextMargin="10px"
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}"
+        vertical="{{vertical}}"
+        interval="{{interval}}"
+        circular="{{circular}}"
+      >
+        <block a:for="{{background}}">
+          <swiper-item key="swiper-item-{{index}}">
+            <view class="swiper-item">
+            <image mode="scaleToFill" src="{{item}}"/>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+  <!-- TODO:广播 -->
+
+  <grid 
+    onGridItemClick="onItemClick" 
+    columnNum="{{3}}" list="{{list55}}" 
+    infinite="{{true}}" 
+    hasLine="{{true}}"
+    infiniteHeight="240rpx" 
+    />
+
+  <view class="special-block">
+    <view class="special-tit">特色专科</view>
+    <view class="content-block">
+      <view a:for="{{specialtyList}}" key="item-{{index}}" class="content-item">
+          <image mode="scaleToFill" src="{{item.url}}"  onClick="searchTo"/>
+          <view>{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="card-block">
+    <view class="special-tit">特色专家</view>
+    <view a:for="{{thumb}}" key="item-{{index}}" class="card-item">
+      <card title="{{item.tit}}"
+      onCardClick="searchTo"
+      info="{{item.id}}" />
+    </view>
+  </view>
+</view>

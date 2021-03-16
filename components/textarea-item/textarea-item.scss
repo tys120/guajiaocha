@@ -1,0 +1,16 @@
+
+.am-textarea-item {
+  padding-top: 12px;
+  .am-input-line {
+    align-items: flex-start;
+  }
+  
+
+  .am-textarea-content{
+    flex: 1;
+    display: flex;
+    color: #000;
+    text-align: left;
+    font-size: 14px;
+  }
+}

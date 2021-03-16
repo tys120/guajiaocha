@@ -1,0 +1,6 @@
+{
+ "defaultTitle": "挂号",
+ "usingComponents": {
+   "button": "mini-ali-ui/es/button/index"
+ }
+}

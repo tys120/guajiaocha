@@ -1,0 +1,13 @@
+{
+  "defaultTitle": "首页",
+  "titleBarColor":"#108ee9",
+  "transparentTitle":"none",
+  "usingComponents": {
+  "grid":"mini-ali-ui/es/grid/index",
+  "pagination": "mini-ali-ui/es/pagination/index",
+  "card":"mini-ali-ui/es/card/index",
+  "am-icon": "mini-ali-ui/es/am-icon/index"
+  },
+  "pullRefresh": false,
+  "allowsBounceVertical": false
+}

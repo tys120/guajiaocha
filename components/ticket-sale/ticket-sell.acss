@@ -1,0 +1,156 @@
+.ticket-sell-container {
+  background: #FFFFFF;
+  border-radius: 4rpx;
+  box-shadow: 0 2px 12px 0 rgba(153, 153, 153, 0.11);
+  margin-bottom: 24rpx;
+  padding: 36rpx 32rpx 20rpx;
+}
+
+.ticket-sell-container:last-child {
+  margin-bottom: 20rpx;
+}
+
+.ticket-sell-container .ticket-summary {
+  font-size: 13px;
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+
+.ticket-sell-container .ticket-summary .tip {
+  font-size: 11px;
+  padding: 4rpx;
+  margin-left: 16rpx;
+  border-radius: 4rpx;
+}
+
+.ticket-sell-container .ticket-summary .tip.bought {
+  background-color: #E4F2FC;
+  color: #108EE9;
+}
+
+.ticket-sell-container .ticket-summary .tip.hot {
+  background-color: #FFF0E3;
+  color: #FFA458;
+}
+
+.ticket-sell-container .route-detail {
+  position: relative;
+  margin-top: 30rpx;
+}
+
+.ticket-sell-container .route-detail .route-line {
+  position: absolute;
+  width: 2px;
+  height: 40rpx;
+  background-color: #D8D8D8;
+  left: 10rpx;
+  top: 30rpx;
+}
+
+.ticket-sell-container .route-detail .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28rpx;
+}
+
+.ticket-sell-container .route-detail .row:last-child {
+  margin-bottom: 0;
+}
+
+.ticket-sell-container .route-detail .row .from-icon {
+  font-size: 6px;
+  background-color: #0dc46e;
+  color: #fff;
+  width: 24rpx;
+  height: 24rpx;
+  text-align: center;
+  line-height: 24rpx;
+  border-radius: 50%;
+  font-weight: bolder;
+}
+
+.ticket-sell-container .route-detail .row .time {
+  font-size: 13px;
+  color: #999;
+  margin: 0 16rpx;
+}
+
+.ticket-sell-container .route-detail .row .place {
+  color: #333333;
+  font-size: 15px;
+  font-family: PingFangSC-Medium;
+  color: #333333;
+  letter-spacing: 0;
+}
+
+.ticket-sell-container .route-detail .row .dest-icon {
+  font-size: 6px;
+  background-color: #f03637;
+  color: #fff;
+  width: 24rpx;
+  height: 24rpx;
+  text-align: center;
+  line-height: 24rpx;
+  border-radius: 50%;
+  font-weight: bolder;
+}
+
+.ticket-sell-container .sep-line {
+  height: 1rpx;
+  border-bottom: 1rpx solid #eee;
+  margin: 28rpx -32rpx 24rpx;
+}
+
+.ticket-sell-container .action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-sell-container .action-bar .price-wap {
+  display: flex;
+  align-items: baseline;
+}
+
+.ticket-sell-container .action-bar .price-wap .origin-price {
+  color: #BDBDBD;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+
+.ticket-sell-container .action-bar .price-wap .price {
+  color: #F25130;
+  font-size: 19px;
+  margin-right: 15rpx;
+}
+.ticket-sell-container .action-bar .price-wap .price .number {
+  font-size: 38rpx;
+  font-family: AlipayNumber-Regular;
+}
+.ticket-sell-container .action-bar .price-wap .price .unit {
+  font-size: 22rpx;
+}
+.ticket-sell-container .action-bar .price-wap .origin-price .number {
+  font-size: 22rpx;
+}
+.ticket-sell-container .action-bar .price-wap .origin-price .unit {
+  font-size: 22rpx;
+}
+
+
+
+.ticket-sell-container .action-bar .buy-button {
+  font-size: 16px;
+  width: 130rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+}
+.ticket-sell-container .action-bar .see-button {
+  font-size: 16px;
+  width: 130rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  background-color: #fff;
+  color: #108EE9;
+}

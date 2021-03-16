@@ -1,0 +1,72 @@
+.btn{
+  margin-top:15px;
+  padding:0 25px 10px;
+}
+
+.form-row{
+  display: flex;
+  align-items: center;
+  padding:8px 15px;
+}
+.page-section-btns{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.date-radio {
+  padding: 26rpx;
+}
+
+.date-radio label + label {
+  margin-left: 20rpx;
+}
+.form-row-content{
+  width:75%;
+}
+.form-row-label{
+  width:25%;
+}
+
+.address-picker {
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.address-picker .picker-box {
+  position: absolute;
+  bottom: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border-top: 1rpx solid #ececec;
+}
+
+.address-picker .picker-box .btn-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60rpx;
+  border-bottom: 1rpx solid #ececec;
+  font-size: 30rpx;
+}
+
+.picker-box .btn-box text {
+  display: block;
+  padding: 6rpx 30rpx;
+}
+
+.picker-box .btn-box .confirm-btn {
+  color: #f5686f;
+}
+input{
+  width:100%;
+}
