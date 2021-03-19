@@ -22,7 +22,6 @@
     "pages/resume/resume",
     "pages/record/record",
     "pages/appointment/appointment",
-    "pages/payment/payment",
     "pages/physical/physical",
     "pages/examinationReport/examinationReport",
     "pages/careful/careful",
@@ -35,7 +34,9 @@
     "pages/result/result",
     "pages/consultation/doctorIndex/doctorIndex",
     "pages/chooseCard/chooseCard",
-    "pages/paymentRecord/paymentRecord"
+    "pages/paymentRecord/paymentRecord",
+    "pages/appointmentRecord/appointmentRecord",
+    "pages/appointmentRecord/appointmentRecordDetail/appointmentRecordDetail"
   ],
   "window": {
     "enableDSL": "YES",

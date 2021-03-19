@@ -23,10 +23,11 @@
         </view> -->
       </list-item>
     </list>
-    <button onTap="onTest" data-type="addPeople" type="primary" class="btn">创建电子就诊卡</button>
-    <button onTap="onTest" data-type="goBack" type="primary" class="btn">返回 </button>
+    
   </view>
   <view a:if="{{userInfo.length===0}}" class="empty">
     暂无就诊人
   </view>
+  <button onTap="onTest" data-type="addPeople" type="primary" class="btn">创建电子就诊卡</button>
+    <button onTap="onTest" data-type="goBack" type="primary" class="btn">返回 </button>
 </view>

@@ -1,7 +1,7 @@
 <view>
   <view class="block">
     <view class="row">
-      <view>{{"姓名:"+reportInfo.userName}}</view>
+      <view>{{"姓名:"+reportInfo.name}}</view>
       <view>{{"性别:"+reportInfo.userSex}}</view>
       <view>{{"年龄:"+reportInfo.userAge}}</view>
     </view>
@@ -30,13 +30,13 @@
     </view>
   </view>
 
-  <view class="data" a:for="{{reportInfo.reportItemList}}">
+  <view class="data" a:for="{{reportInfo.children}}">
     <view class="title">{{item.itemName+" "}}
-    <text a:if="{{item.pnFlag==='NORMAL'}}" style="color:#21b382">(正常)</text>
-    <text a:if="{{item.pnFlag==='HIGH'}}" style="color:#f00">(高↑)</text>
-    <text a:if="{{item.pnFlag==='LOW'}}" style="color:#babd84">(低↓)</text>
+    <text a:if="{{item.tip==='NORMAL'}}" style="color:#21b382">(正常)</text>
+    <text a:if="{{item.tip==='HIGH'}}" style="color:#f00">(高↑)</text>
+    <text a:if="{{item.tip==='LOW'}}" style="color:#babd84">(低↓)</text>
     </view>
     <view>{{"参考值:"+item.reference}}</view>
-    <view>{{"结果"+item.txtVal}}</view>
+    <view>{{"结果"+item.result}}</view>
   </view>
 </view>
