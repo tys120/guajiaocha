@@ -8,8 +8,3 @@
 .traffic-offence-record-page > view {
     margin-bottom:24rpx;
 }
-
-.empty{
-  padding-top:15px;
-  text-align: center;
-}

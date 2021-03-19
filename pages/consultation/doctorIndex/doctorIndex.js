@@ -3,31 +3,36 @@ Page({
     weekData:[],
     activeTab:0,
     chooseDate:'',
-    deptId:"",
-    timeRange:[
-    //   {
-    //   id:"1",
-    //   name:"杨伟翔 主任医生",
-    //   professionalTitle:"专业：xx",
-    //   imageUrl:"https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png",
-    //   deptName:"急诊科"
-    // },{
-    //   id:"2",
-    //   name:"杨伟翔 主任医生",
-    //   professionalTitle:"专业：xx",
-    //   imageUrl:"https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png",
-    //   deptName:"急诊科"
-    // },{
-    //   id:"3",
-    //   name:"杨伟翔 主任医生",
-    //   professionalTitle:"专业：xx",
-    //   imageUrl:"https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png",
-    //   deptName:"急诊科"
-    // },
-  ]
+    timeRange:[{
+      range:"下午",
+      hasNot:true,
+      name:"杨伟翔 主任医生",
+      zhiwei:"专业：xx",
+      time:'14:00-14:15',
+      avtor:"https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png",
+      goodAt:"擅长：儿童及成人内分泌疾病，甲状腺童及成人内分泌疾病，甲状腺童及成人内分泌疾病，甲状腺",
+      money:0
+    },{
+      range:"下午",
+      hasNot:true,
+      name:"杨伟翔 主任医生",
+      zhiwei:"专业：xx",
+      time:'14:00-14:15',
+      avtor:"https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png",
+      goodAt:"擅长：儿童及成人内分泌疾病，甲状腺童及成人内分泌疾病，甲状腺童及成人内分泌疾病，甲状腺",
+      money:0
+    },{
+      range:"下午",
+      hasNot:true,
+      name:"杨伟翔 主任医生",
+      zhiwei:"专业：xx",
+      time:'14:00-14:15',
+      avtor:"https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png",
+      goodAt:"擅长：儿童及成人内分泌疾病，甲状腺童及成人内分泌疾病，甲状腺童及成人内分泌疾病，甲状腺",
+      money:0
+    },]
   },
   onLoad(options) {
-    this.getDoctorList()
     var days = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
      var today=new Date();
       for(var i=0;i<7;i++){
@@ -43,7 +48,6 @@ Page({
       this.setData({
         chooseDate:this.data.weekData[this.data.activeTab]
       })
-      this.data.deptId=options.id
       // console.log(this.data.weekData)
   },
   changeTab(ev){
@@ -56,38 +60,10 @@ Page({
     })
   },
   chooseTime(ev){
-    my.navigateTo({url: '/pages/consultation/scheduling/scheduling?info='+JSON.stringify(this.data.timeRange[ev.target.dataset.index])+'&ymd='+this.data.chooseDate.date});
+    
+    my.navigateTo({url: '/pages/consultation/scheduling/scheduling?userInfo='+JSON.stringify(this.data.userInfo) +'&info='+JSON.stringify(this.data.timeRange[ev.target.dataset.index])+'&ymd='+this.data.chooseDate.date});
   },
   onUnload: function () {
     this.data.weekData.length=0
   },
-  getDoctorList(){
-    // my.request({
-    //   url: 'https://httpbin.org/doctor/list',
-    //   method: 'GET',
-    //   data: {
-    //     deptId:this.data.deptId
-    //   },
-    //   dataType: 'json',
-    //   success: function(res) {
-    //     if(res.data.data.length > 0){
-    //     res.data.data.forEach(item =>{
-    //       if (item.professionalTitle == null) {
-    //         item.professionalTitle = ''
-    //       }
-    //     })
-    //   } else {
-    //     this.showMsg = true
-    //   } 
-    //     this.setData({
-    //       timeRange:res.data.data
-    //     })
-    //   },
-    //   fail: function(res) {
-    //     my.showToast({
-    //       content:res.Msg
-    //     })
-    //   }
-    // });
-  }
 });

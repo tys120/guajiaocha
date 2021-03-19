@@ -27,12 +27,5 @@
       <view>{{orderInfo.name}}</view>
     </view>
   </view>
-
-  <view a:for="{{orderInfo.children}}" key="{{item.id}}" a:if="{{orderInfo.children.length>0}}">
-    <view class="every">
-      <view>{{item.itemName+"x"+item.itemNum}}</view>
-      <view>{{"￥"+item.itemPrice}}</view>
-    </view>
-  </view>
-  <button onTap="onTest" type="primary" class="btn" a:if="{{!orderInfo.isPay}}">自费结算 </button>
+  <button onTap="onTest" type="primary" class="btn">自费结算 </button>
 </view>

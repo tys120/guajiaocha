@@ -1,19 +1,36 @@
 <view>
   <view class="block">
     <view class="row">
-      <view>{{"姓名:"+reportInfo.name}}</view>
-      <view>{{"性别:"+reportInfo.sex}}</view>
-      <view>{{"年龄:"+reportInfo.age}}</view>
+      <view>{{"姓名:"+reportInfo.userName}}</view>
+      <view>{{"性别:"+reportInfo.userSex}}</view>
+      <view>{{"年龄:"+reportInfo.userAge}}</view>
     </view>
-    <!-- <view class="row">
+    <view class="row">
       <view>{{"申请科室名称:"+reportInfo.departmentName}}</view>
       <view>{{"申请医生:"+reportInfo.applyDoctorName}}</view>
-    </view> -->
+    </view>
   </view>
 
-  
+  <view class="block">
+    <view class="row">
+      <view>检查流水号</view>
+      <view>{{reportInfo.recordId}}</view>
+    </view>
+    <view class="row">
+      <view>诊断</view>
+      <view>{{reportInfo.diagnosis}}</view>
+    </view>
+     <view class="row">
+      <view>申请日期</view>
+      <view>{{reportInfo.applyDate}}</view>
+    </view>
+    <view class="spec">
+      <view onTap="openPDF">查看PDF报告</view>
+      <view onTap="openIMG">查看图片报告</view>
+    </view>
+  </view>
 
-  <!-- <view class="data" a:for="{{reportInfo.children}}">
+  <view class="data" a:for="{{reportInfo.reportItemList}}">
     <view class="title">{{item.itemName+" "}}
     <text a:if="{{item.pnFlag==='NORMAL'}}" style="color:#21b382">(正常)</text>
     <text a:if="{{item.pnFlag==='HIGH'}}" style="color:#f00">(高↑)</text>
@@ -21,35 +38,5 @@
     </view>
     <view>{{"参考值:"+item.reference}}</view>
     <view>{{"结果"+item.txtVal}}</view>
-  </view> -->
-  <view style="background:#fff">
-    <view class="fb"><view class="fc-04">检查名称:</view><view class="fc-04">{{reportInfo.children.checkName}}</view></view>
-    <view class="fb"><view class="fc-04">送检科室:</view><view class="fc-04">{{reportInfo.children.deptName}}</view></view>
-    <view class="fb"><view class="fc-04">送检医生:</view><view class="fc-04">{{reportInfo.children.doctorName}}</view></view>
-    <view class="fb"><view class="fc-04">检查部位:</view><view class="fc-04">{{reportInfo.children.checkPart}}</view></view>
-    <view class="fb"><view class="fc-04">检查方法:</view><view class="fc-04">{{reportInfo.children.checkMethod}}</view></view>
-    <view class="fb"><view class="fc-04">检查所见:</view><view class="fc-04">{{reportInfo.children.checkSituation}}</view>  </view>       
-    <view class="fb"><view class="fc-04">影像提示:</view><view class="fc-04">{{reportInfo.children.imageTips}}</view></view>
-    <view class="fb"><view class="fc-04">诊断意见:</view><view class="fc-04">{{reportInfo.children.option}}</view></view>
   </view>
-
-<view class="block">
-    <!-- <view class="row">
-      <view>检查流水号</view>
-      <view>{{reportInfo.recordId}}</view>
-    </view> -->
-    <!-- <view class="row">
-      <view>诊断</view>
-      <view>{{reportInfo.diagnosis}}</view>
-    </view> -->
-     <!-- <view class="row">
-      <view>申请日期</view>
-      <view>{{reportInfo.applyDate}}</view>
-    </view> -->
-    <view class="spec">
-      <view onTap="openPDF">查看PDF报告</view>
-      <view onTap="openIMG">查看图片报告</view>
-    </view>
-  </view>
-  
 </view>

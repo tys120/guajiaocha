@@ -34,7 +34,7 @@
     />
   </view>
 
-  <view  onTap="goMycard" a:if="{{showCard}}">
+  <view  onTap="goMycard">
     <view class="hosService spec">我的证件 <text>绑定本院就诊卡</text>
     <am-icon type="right" 
               color="#ccc" /></view>
@@ -47,7 +47,7 @@
      />
   </view>
 
-  <view class="tipBlock" a:if="{{false}}">
+  <view class="tipBlock">
     <view class="hosService">提醒</view>
     <view class="tip">
       <view class="tipRow">

@@ -41,10 +41,3 @@
   padding-top:15px;
   text-align: center;
 }
-
-.green{
-  color:#21b382;
-}
-.red{
-  color:#ff6010;
-}

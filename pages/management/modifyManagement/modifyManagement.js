@@ -4,15 +4,14 @@ Page({
     value: [0, 0, 0], // 当前组件的结果值，记录的各列索引
     addressList: arrList, // 所有的地址信息数据
     userInfo:{
-      name:'',
-      cardNum:"",
+      name:'哦哦',
+      cardNum:"2021002103662702",
       type:null,
-      sex:"",
-      birthDay:"",
-      idCardNo:"",
-      phoneNumber:"",
-      balance:"0",
-      isDefault:0
+      sex:"男",
+      birthDay:"2020-12-12",
+      idCardNo:"511123199111130532",
+      phoneNumber:"17311351991",
+      balance:"0"
     },
     visible:false,
     sexIndex:0,
@@ -59,22 +58,6 @@ Page({
     }
   },
   deleteData(){
-    // my.request({
-    //   url: 'https://httpbin.org/patient/delete',
-    //   method: 'GET',
-    //   data: {
-    //     id:this.data.userInfo.id
-    //   },
-    //   dataType: 'json',
-    //   success: function(res) {
-    //    
-    //   },
-    //   fail: function(res) {
-    //     my.showToast({
-    //       content:res.Msg
-    //     })
-    //   }
-    // });
      my.showToast({
       type: 'success',
       content: "删除成功",
@@ -90,11 +73,10 @@ Page({
       this.data.userInfo.name= e.detail.value.trim()
     }else if(type==="tel"){
       this.data.userInfo.phoneNumber= e.detail.value.trim()
-    // }else if(type==="birth"){
-    //   this.data.userInfo.birthDay= e.detail.value.trim()
+    }else if(type==="birth"){
+      this.data.userInfo.birthDay= e.detail.value.trim()
     }else if(type==="number"){
       this.data.userInfo.cardNum= e.detail.value.trim()
-      this.data.userInfo.birthDay= this.data.userInfo.cardNum.substring(6,10)+"-"+this.data.userInfo.cardNum.substring(10,12)+"-"+this.data.userInfo.cardNum.substring(12,14)
     }else if(type==="contentName"){
       this.data.userInfo.contentName= e.detail.value.trim()
     }else if(type==="contentTel"){
@@ -145,62 +127,16 @@ Page({
       })
       return false;
     }
-    this.data.userInfo.balance="0"
-    if(this.data.userInfo.isDefault===1){
       my.setStorage({
-        key: 'default',
-        data: this.data.userInfo,
-      });
-    }
-    console.log(this.data.userInfo)
+      key: 'default',
+      data: this.data.userInfo,
+    });
     var str=""
-    let url=""
     if(this.data.from){
-      url="/patient"
-      // senddata={
-      //   address: this.patientInfo.address,
-      //   cellphone: this.patientInfo.cellphone,
-      //   contactMobile: this.patientInfo.contact_mobile,
-      //   contactName: this.patientInfo.contact_name,
-      //   idNumber: this.patientInfo.id_number,
-      //   email: this.patientInfo.email,
-      //   isDefault: this.patientInfo.is_default,
-      //   name: this.patientInfo.name,
-      //   sex: this.patientInfo.sex,
-      //   maritalStatus:this.patientInfo.maritalStatus,
-      //   relation:this.patientInfo.gxStatus,
-      // }
       str="添加成功"
     }else{
-      url="/patient/update"
-      // senddata={
-      //   address: this.patientInfo.address,
-      //   cellphone: this.patientInfo.cellphone,
-      //   contactMobile: this.patientInfo.contact_mobile,
-      //   contactName: this.patientInfo.contact_name,
-      //   idNumber: this.patientInfo.id_number,
-      //   email: this.patientInfo.email,
-      //   isDefault: this.patientInfo.is_default,
-      //   name: this.patientInfo.name,
-      //   sex: this.patientInfo.sex,
-      //   maritalStatus:this.patientInfo.maritalStatus,
-      //   relation:this.patientInfo.gxStatus,
-      // }
       str="修改成功"
     }
-    // my.request({
-    //   url: url,
-    //   method: 'POST',
-    //   data: senddata,
-    //   success: function(res) {
-    //    
-    //   },
-    //   fail: function(res) {
-    //     my.showToast({
-    //       content:res.Msg
-    //     })
-    //   }
-    // });
      my.showToast({
       type: 'success',
       content: str,
@@ -210,6 +146,24 @@ Page({
       },
     });
     
+  },
+  onReset() {
+    this.setData({
+      userInfo:{
+              name:'',
+              tel:'',
+              sex:'男',
+              isDefault:1,
+              email:"",
+              marrary:"未婚",
+              number:"",
+              address:"",
+              contentName:"",
+              contentTel:""
+            },
+      sexIndex:0,
+      marrayIndex:0
+    })
   },
   bindObjPickerChange(e) {
     this.setData({
@@ -242,7 +196,7 @@ Page({
   },
   onShow: function(){
     if(this.data.isReset){
-      let newObj={name:'', sex:'男',isDefault:1,marrary:"未婚",}
+      let newObj={name:'',tel:'', sex:'男',isDefault:1,email:"",marrary:"未婚",number:"",address:"",contentName:"",contentTel:""}
       this.setData({
         userInfo:newObj,
         sexIndex:0,

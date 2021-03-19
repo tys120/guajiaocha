@@ -1,43 +1,37 @@
 Page({
   data: {
-    docInfo:{
-      imageUrl:'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
-      deptName:'急诊科',
+    userInfo:{
+      avtor:'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
+      keshi:'急诊科',
+      range:"下午",
+      hasNot:true,
       name:"杨伟翔 主任医生",
-      professionalTitle:"专业：xx"
+      zhiwei:"专业：xx",
+      time:'14:00-14:15',
+      goodAt:"擅长：儿童及成人内分泌疾病，甲状腺童及成人内分泌疾病，甲状腺童及成人内分泌疾病，甲状腺",
+      money:0
     },
     weekData:[],
     activeTab:0,
     chooseDate:'',
-    docID:"",
     timeRange:[{
-      timeType:0,
-      status:0,
-      visitDate:"2021",
-      beginTime:"14:00",
-      endTime:"14:15",
+      range:"下午",
+      hasNot:true,
       time:'14:00-14:15',
-      fee:0
+      money:0
     },{
-      timeType:1,
-      status:1,
-      visitDate:"2021",
-      beginTime:"14:40",
-      endTime:"15:00",
+      range:"下午",
+      hasNot:true,
       time:'14:40-15：00',
-      fee:0
+      money:0
     },{
-      timeType:1,
-      status:0,
-      visitDate:"2021",
-      beginTime:"15:15",
-      endTime:"15:30",
+      range:"下午",
+      hasNot:true,
       time:'15:15-15:30',
-      fee:0
+      money:0
     },]
   },
   onLoad(options) {
-    this.getVisitTime()
     var days = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
      var today=new Date();
       for(var i=0;i<7;i++){
@@ -50,10 +44,8 @@ Page({
           var dt = new Date(sDate.replace(/-/g, '/'));
           this.data.weekData.push({date:sDate,week:days[dt.getDay()]})
       }
-      console.log(options)
       this.setData({
-        chooseDate:this.data.weekData[this.data.activeTab],
-        docInfo:JSON.parse(options.info)
+        chooseDate:this.data.weekData[this.data.activeTab]
       })
       // console.log(this.data.weekData)
   },
@@ -62,49 +54,16 @@ Page({
       activeTab:ev.target.dataset.info,
     })
     this.data.chooseDate=this.data.weekData[this.data.activeTab]
-    // this.setData({
-    //   timeRange:this.data.timeRange
-    // })
-    this.getVisitTime()
+    this.setData({
+      timeRange:this.data.timeRange
+    })
   },
   chooseTime(ev){
-    if (this.data.timeRange[ev.target.dataset.index].status == 0) {
-        my.showToast({
-          type: 'fail',
-          content: '此时段已无号'
-        });
-        return
-      }
+    
     // my.navigateTo({url: '/pages/consultation/consultationDescribe/consultationDescribe?userInfo='+JSON.stringify(this.data.userInfo) +'&info='+JSON.stringify(this.data.timeRange[ev.target.dataset.index])+'&ymd='+this.data.chooseDate.date});
-    my.navigateTo({url: '/pages/consultation/consultationDescribe/consultationDescribe?docInfo='+JSON.stringify(this.data.docInfo) +'&info='+JSON.stringify(this.data.timeRange[ev.target.dataset.index])+'&ymd='+this.data.chooseDate.date});
+    my.navigateTo({url: '/pages/chooseCard/chooseCard?userInfo='+JSON.stringify(this.data.userInfo) +'&info='+JSON.stringify(this.data.timeRange[ev.target.dataset.index])+'&ymd='+this.data.chooseDate.date});
   },
   onUnload: function () {
     this.data.weekData.length=0
   },
-  getVisitTime(){
-    // my.request({
-    //   url: 'https://httpbin.org/schedule/list',
-    //   method: 'GET',
-    //   data: {
-    //     doctorId: this.data.docInfo.id,
-    //     visitDate: this.data.chooseDate
-    //   },
-    //   dataType: 'json',
-    //   success: function(res) {
-    //      res.data.data.map(item => {
-    //        item.beginTime = moment(item.beginTime, "HHmm").format("HH:mm");
-    //        item.endTime = moment(item.endTime, "HHmm").format("HH:mm");
-    //        return item;
-    //      });
-    //     this.setData({
-    //       timeRange:res.data.data
-    //     })
-    //   },
-    //   fail: function(res) {
-    //     my.showToast({
-    //       content:res.Msg
-    //     })
-    //   }
-    // });
-  }
 });

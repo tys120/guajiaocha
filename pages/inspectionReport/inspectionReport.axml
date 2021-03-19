@@ -1,52 +1,50 @@
 <view>
-  <!-- <view class="row">
+  <view class="row">
     <view  onTap="datePicker" data-type="start">开始时间：{{startTime.replace("-","/").replace("-","/")}}</view>
     <view  onTap="datePicker" data-type="end">结束时间：{{endTime.replace("-","/").replace("-","/")}}</view>
     <button size="default" type="primary">查询</button>
-  </view> -->
-  <!-- <view a:if="{{report.length>0}}">
-    <collapse
-      className="collapse"
-      collapseKey="inspectionReport"
-      activeKey="{{['item-0']}}"
-      accordion="{{true}}"
-    >
-      <collapse-item header="{{item.reportTime + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + item.doctorName + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + item.inspectName}}" itemKey="item-{{index}}" collapseKey="inspectionReport" a:for="{{report}}" key="{{item.checkId}}" class="item">
-        <view class="fb"><text class="fc-04">检查名称:</text>{{item.children.checkName}}</view>
-        <view class="fb"><text class="fc-04">送检科室:</text>{{item.children.deptName}}</view>
-        <view class="fb"><text class="fc-04">送检医生:</text>{{item.children.doctorName}}</view>
-        <view class="fb"><text class="fc-04">检查部位:</text>{{item.children.checkPart}}</view>
-        <view class="fb"><text class="fc-04">检查方法:</text>{{item.children.checkMethod}}</view>
-        <view class="fb"><text class="fc-04">检查所见:</text>{{item.children.checkSituation}}</view>         
-        <view class="fb"><text class="fc-04">影像提示:</text>{{item.children.imageTips}}</view>
-        <view class="fb"><text class="fc-04">诊断意见:</text>{{item.children.option}}</view>
-      </collapse-item>
-    </collapse>  
-  </view> -->
-  <scroll-view a:if="{{report.length>0}}">
-    <view class="showInfo" a:for="{{report}}" data-info="{{index}}" key="{{index}}" onTap="lookDescribe">
+  </view>
+  <collapse
+    className="collapse"
+    collapseKey="inspectionReport"
+    activeKey="{{['item-0']}}"
+    accordion="{{true}}"
+  >
+    <collapse-item header="{{item.reportTime + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + item.doctorName + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + item.inspectName}}" itemKey="item-{{index}}" collapseKey="inspectionReport" a:for="{{report}}" key="{{item.checkId}}" class="item">
+      <view class="fb"><text class="fc-04">检查名称:</text>{{item.children.checkName}}</view>
+      <view class="fb"><text class="fc-04">送检科室:</text>{{item.children.deptName}}</view>
+      <view class="fb"><text class="fc-04">送检医生:</text>{{item.children.doctorName}}</view>
+      <view class="fb"><text class="fc-04">检查部位:</text>{{item.children.checkPart}}</view>
+      <view class="fb"><text class="fc-04">检查方法:</text>{{item.children.checkMethod}}</view>
+      <view class="fb"><text class="fc-04">检查所见:</text>{{item.children.checkSituation}}</view>         
+      <view class="fb"><text class="fc-04">影像提示:</text>{{item.children.imageTips}}</view>
+      <view class="fb"><text class="fc-04">诊断意见:</text>{{item.children.option}}</view>
+    </collapse-item>
+  </collapse>  
+  <!--<scroll-view a:if="{{report.length>0}}">
+     <view class="showInfo" a:for="{{report}}" data-info="{{index}}" key="{{index}}" onTap="lookDescribe">
       <view class="top">
         <view>{{item.isFinish?"已出报告":"未出报告"}}</view>
-        <view>{{item.reportTime}}</view>
+        <view>{{item.time}}</view>
       </view>
       <view class="middle">{{item.keshi}}</view>
       <view class="bottom">
         <view class="people">
           <view>报告名称</view>
-          <view>{{item.inspectName}}</view>
+          <view>{{item.reportName}}</view>
         </view>
         <view class="people">
           <view>姓名</view>
           <view>{{item.name}}</view>
         </view>
-        <!-- <view class="people">
+        <view class="people">
           <view>流水号</view>
           <view>{{item.number}}</view>
-        </view> 
+        </view>
         <view class="people">
           <view>就诊卡卡号</view>
           <view>{{item.cardNumber}}</view>
-        </view>-->
+        </view>
         <view class="people">
           <view>查看详情</view>
           <view
@@ -57,8 +55,8 @@
         </view>
       </view>
     </view>
-  </scroll-view>
-  <view a:if="{{report.length==0}}" class="empty">
+  </scroll-view> -->
+  <view a:if="{{reprot.length===0}}" class="empty">
     暂无检查报告
   </view>
 </view>
