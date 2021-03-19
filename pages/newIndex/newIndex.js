@@ -40,13 +40,13 @@ Page({
      }
     ],
     userInfo:{
-      cardNum:"",
+      idNumber:"",
       type:null,
       name:"",
       sex:"",
       birthDay:"",
       idCardNo:"",
-      phoneNumber:"",
+      cellphone:"",
       balance:"0"
     },
     remind:{
@@ -92,7 +92,7 @@ Page({
     my.getStorage({
       key: 'default',
       success(res) {
-        res.data.birthDay=res.data.cardNum.substring(6,10)+"-"+res.data.cardNum.substring(10,12)+"-"+res.data.cardNum.substring(12,14)
+        res.data.birthDay=res.data.idNumber.substring(6,10)+"-"+res.data.idNumber.substring(10,12)+"-"+res.data.idNumber.substring(12,14)
         that.setData({
           localName:res.data.name,
           userInfo:res.data,
@@ -139,19 +139,6 @@ Page({
     }
  },
   getUserInfo(){
-    // let uf={
-    //   cardNum:"2021002103662702",
-    //   type:null,
-    //   name:"张三",
-    //   sex:"男",
-    //   birthDay:"2020-12-12",
-    //   idCardNo:"511123199111130532",
-    //   phoneNumber:"17311351991",
-    //   balance:"0"
-    // }
-    // this.setData({
-    //   userInfo:uf
-    // })
     // let that=this
     // let str=""
     // my.getStorage({

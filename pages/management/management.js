@@ -3,12 +3,12 @@ Page({
     userInfo:[
     //   {
     //   name:'兔兔',
-    //   cardNum:"210211199505012916",
+    //   idNumber:"210211199505012916",
     //   type:null,
     //   sex:"男",
     //   birthDay:"2020-12-12",
     //   idCardNo:"511123199111130532",
-    //   phoneNumber:"17311351991",
+    //   cellphone:"17311351991",
     //   balance:"0"
     //   // tel:'17741155570',
     //   // sex:'男',
@@ -21,12 +21,12 @@ Page({
     //   // contentTel:"15565458533"
     // },{
     //   name:'哦哦',
-    //   cardNum:"210211199505012916",
+    //   idNumber:"210211199505012916",
     //   type:null,
     //   sex:"男",
     //   birthDay:"2020-12-12",
     //   idCardNo:"511123199111130532",
-    //   phoneNumber:"17311351991",
+    //   cellphone:"17311351991",
     //   balance:"0"
     //   // name:'哦哦',
     //   // tel:'17741155570',
@@ -40,12 +40,12 @@ Page({
     //   // contentTel:"15565458533"
     // },{
     //   name:'哈哈',
-    //   cardNum:"210211199505012916",
+    //   idNumber:"210211199505012916",
     //   type:null,
     //   sex:"男",
     //   birthDay:"2020-12-12",
     //   idCardNo:"511123199111130532",
-    //   phoneNumber:"17311351991",
+    //   cellphone:"17311351991",
     //   balance:"0"
     //   // name:'哈哈',
     //   // tel:'17741155570',
@@ -73,7 +73,7 @@ Page({
       userInfo:this.data.userInfo
     })
     this.data.userInfo.forEach(item => {
-      item.birthDay= item.cardNum.substring(6,10)+"-"+item.cardNum.substring(10,12)+"-"+item.cardNum.substring(12,14)
+      item.birthDay= item.idNumber.substring(6,10)+"-"+item.idNumber.substring(10,12)+"-"+item.idNumber.substring(12,14)
     });
    // my.request({
     //   url: 'https://httpbin.org/patient/list',
@@ -83,7 +83,7 @@ Page({
     //   },
     //   dataType: 'json',
     //   success: function(res) {
-    //      res.data.data.birthDay= res.data.data.cardNum.substring(6,10)+"-"+res.data.data.cardNum.substring(10,12)+"-"+res.data.data.cardNum.substring(12,14)
+    //      res.data.data.birthDay= res.data.data.idNumber.substring(6,10)+"-"+res.data.data.idNumber.substring(10,12)+"-"+res.data.data.idNumber.substring(12,14)
     //     this.setData({
     //       userInfo:res.data.data
     //     })

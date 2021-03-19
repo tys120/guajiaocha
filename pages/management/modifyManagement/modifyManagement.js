@@ -5,12 +5,12 @@ Page({
     addressList: arrList, // 所有的地址信息数据
     userInfo:{
       name:'',
-      cardNum:"",
+      idNumber:"",
       type:null,
       sex:"",
       birthDay:"",
       idCardNo:"",
-      phoneNumber:"",
+      cellphone:"",
       balance:"0",
       isDefault:0
     },
@@ -89,12 +89,12 @@ Page({
     if(type==="name"){
       this.data.userInfo.name= e.detail.value.trim()
     }else if(type==="tel"){
-      this.data.userInfo.phoneNumber= e.detail.value.trim()
+      this.data.userInfo.cellphone= e.detail.value.trim()
     // }else if(type==="birth"){
     //   this.data.userInfo.birthDay= e.detail.value.trim()
     }else if(type==="number"){
-      this.data.userInfo.cardNum= e.detail.value.trim()
-      this.data.userInfo.birthDay= this.data.userInfo.cardNum.substring(6,10)+"-"+this.data.userInfo.cardNum.substring(10,12)+"-"+this.data.userInfo.cardNum.substring(12,14)
+      this.data.userInfo.idNumber= e.detail.value.trim()
+      this.data.userInfo.birthDay= this.data.userInfo.idNumber.substring(6,10)+"-"+this.data.userInfo.idNumber.substring(10,12)+"-"+this.data.userInfo.idNumber.substring(12,14)
     }else if(type==="contentName"){
       this.data.userInfo.contentName= e.detail.value.trim()
     }else if(type==="contentTel"){
@@ -105,7 +105,7 @@ Page({
   onSubmit(e) {
     var userName = this.data.userInfo.name;
     var mobile = this.data.userInfo.phoneNumber;
-    var cardNum = this.data.userInfo.cardNum;
+    var cardNum = this.data.userInfo.idNumber;
     if (userName.length===0) {
       my.showToast({
         content: '请输入用户名',

@@ -10,7 +10,7 @@
         <card thumb="{{item.name}}"
           title="{{item.sex}}"
           subTitle="{{item.birthDay}}"
-          number="{{item.cardNum.substr(0, 3) + '********' + item.cardNum.substr(12)}}"
+          number="{{item.idNumber.substr(0, 3) + '********' + item.idNumber.substr(12)}}"
           money="{{item.balance}}"
           expand
           />
