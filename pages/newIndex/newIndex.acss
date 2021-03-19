@@ -34,9 +34,9 @@
 }
 
 .am-card-thumb{
-  width:35px;
-  height:35px;
-  line-height:35px;
+  width:50px;
+  height:50px;
+  line-height:50px;
   font-size:14px;
   color:#4492ff;
   text-align: center;

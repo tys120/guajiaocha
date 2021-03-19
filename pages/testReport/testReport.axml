@@ -9,6 +9,7 @@
     collapseKey="testReport"
     activeKey="{{['item-0']}}"
     accordion="{{true}}"
+    a:if="{{report.length>0}}"
   >
     <collapse-item header="{{item.reportTime + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + item.doctorName + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + item.inspectName}}" itemKey="item-{{index}}" collapseKey="testReport" a:for="{{report}}" key="{{item.checkId}}" class="item">
       <view>
@@ -34,26 +35,26 @@
     <view class="showInfo" a:for="{{report}}" data-info="{{index}}" key="{{index}}" onTap="lookDescribe">
       <view class="top">
         <view>{{item.isFinish?"已出报告":"未出报告"}}</view>
-        <view>{{item.time}}</view>
+        <view>{{item.reportTime}}</view>
       </view>
       <view class="middle">{{item.keshi}}</view>
       <view class="bottom">
         <view class="people">
           <view>报告名称</view>
-          <view>{{item.reportName}}</view>
+          <view>{{item.inspectName}}</view>
         </view>
         <view class="people">
           <view>姓名</view>
           <view>{{item.name}}</view>
         </view>
-        <view class="people">
+        <!-- <view class="people">
           <view>流水号</view>
           <view>{{item.number}}</view>
-        </view>
-        <view class="people">
+        </view> -->
+        <!-- <view class="people">
           <view>就诊卡卡号</view>
           <view>{{item.cardNumber}}</view>
-        </view>
+        </view> -->
         <view class="people">
           <view>查看详情</view>
           <view

@@ -39,17 +39,18 @@
         </picker>
         </view>
       </view> -->
-      <view class="form-row">
-        <view class="form-row-label">出生日期</view>
-        <view class="form-row-content" onTap="datePicker" data-type="birth">
-        <!-- <input name="input" onTap="datePicker" data-type="start" class="input" placeholder="请选择出生日期"  value="{{userInfo.birthDay}}"/> -->
-          <input   placeholder="请选择出生日期" value="{{userInfo.birthDay}}" />
-        </view>
-      </view>
+      
       <view class="form-row">
         <view class="form-row-label">身份证号</view>
         <view class="form-row-content">
           <input name="input" onInput='bindInput' data-type="number" class="input" placeholder="请输入身份证"  value="{{userInfo.cardNum}}"/>
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">出生日期</view>
+        <view class="form-row-content" data-type="birth">
+        <!-- <input name="input" onTap="datePicker" data-type="start" class="input" placeholder="请选择出生日期"  value="{{userInfo.birthDay}}"/> -->
+          <input   placeholder="" value="{{userInfo.birthDay}}" disabled />
         </view>
       </view>
       <view class="form-row" a:if="{{!isReset}}">
@@ -100,12 +101,12 @@
           <input name="input" onInput='bindInput' data-type="contentTel" class="input" placeholder="请输入联系人电话"  value="{{userInfo.contentTel}}"/>
         </view>
       </view>-->
-      <!-- <view class="form-row">
+      <view class="form-row">
         <view class="form-row-label">是否默认</view>
         <view class="form-row-content" style="text-align: left;padding-left:15px;">
           <switch name="switch" checked="{{userInfo.isDefault}}" onChange="switchChange"/>
         </view>
-      </view> -->
+      </view> 
       
       <view class="page-section-btns">
         <!-- <view><button type="ghost" formType="reset" class="btn" a:if="{{isReset}}">重置</button></view> -->

@@ -1,20 +1,21 @@
-<vtabs
+<!-- <vtabs
   tabs="{{tabs}}"
   onChange="onChange"
   activeTab="{{activeTab}}"
   sameFontSize="{{false}}"
   tabBarlineShow="{{false}}"
->
-  <block a:for="{{tabs}}">
-    <vtab-content anchor="{{item.anchor}}">
+> -->
+  <block>
+    <!-- <vtab-content anchor="{{item.anchor}}"> -->
       <view style="height: 100vh">
         <list>
-          <block a:for="{{items2}}">
+          <!-- <block a:for="{{items2}}"> -->
           <list-item 
+              a:for="{{tabs}}"
               arrow="{{true}}"
               onClick="onItemClick"
               index="{{index}}" 
-              upperSubtitle="{{item.title}}" >
+              upperSubtitle="{{item.deptName}}" >
             </list-item>
             <!-- <list-item
               arrow="{{true}}" 
@@ -25,11 +26,11 @@
               last="{{index === (items2.length - 1)}}">
               {{item.title}}
             </list-item> -->
-          </block>
+          <!-- </block> -->
         </list>
       </view>
-    </vtab-content>
+    <!-- </vtab-content> -->
   </block>
-</vtabs>
+<!-- </vtabs> -->
 
 <!--onTabClick="handleChange"  -->

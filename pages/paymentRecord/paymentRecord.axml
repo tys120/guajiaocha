@@ -1,5 +1,8 @@
 <view class="traffic-offence-record-page">
-    <view>
+    <view a:if="{{item1.length>0}}">
         <traffic-offence-record a:for="{{item1}}" data="{{item}}" onDetail="onClickDetail"/>
+    </view>
+    <view a:if="{{item1.length==0}}" class="empty">
+      暂无缴费记录
     </view>
 </view>

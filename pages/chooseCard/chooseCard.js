@@ -61,16 +61,37 @@ Page({
   },
   onLoad(options) {
     // console.log(options)
+    this.getPatList()
     this.data.obj=options
   },
   onItemClick(ev) {
     // console.log(ev.target.dataset.info)
-    my.setStorage({
-      key: 'default',
-      data: ev.target.dataset.info
-    });
+    // my.setStorage({
+    //   key: 'default',
+    //   data: ev.target.dataset.info
+    // });
     my.navigateTo({
-        url: '/pages/consultation/consultationDescribe/consultationDescribe?options='+JSON.stringify(this.data.obj)
+        url: '/pages/consultation/consultationDescribe/consultationDescribe?options='+JSON.stringify(this.data.obj)+"&cardInfo="+JSON.stringify(ev.target.dataset.info)
       });
  },
+ getPatList(){
+   // my.request({
+    //   url: 'https://httpbin.org/post',
+    //   method: 'GET',
+    //   data: {
+    //     openid:my.getStorage({key: 'openid'});
+    //   },
+    //   dataType: 'json',
+    //   success: function(res) {
+    //     this.setData({
+    //       userInfo:res.data.data
+    //     })
+    //   },
+    //   fail: function(res) {
+    //     my.showToast({
+    //       content:res.Msg
+    //     })
+    //   }
+    // });
+ }
 });

@@ -1,0 +1,18 @@
+<view>
+  <list a:if="{{list.length>0}}">
+    <list-item
+      a:for="{{list}}"
+      arrow="{{true}}"
+      onClick="onItemClick"
+      index="{{index}}"
+      upperSubtitle="{{item.regKind + '\xa0\xa0' +  item.regTime + '\xa0\xa0' + item.doctorName}}"
+      lowerSubtitle="{{item.payMode + '\xa0\xa0' + item.source + '\xa0\xa0'  + item.status}}" >
+      <!-- 主标题 -->
+      <view slot="extra">
+        {{'￥'+ item.price}}
+      </view>
+    </list-item></list>
+    <view a:if="{{list.length==0}}" class="empty">
+      暂无预约记录
+    </view>
+</view>

@@ -1,10 +1,10 @@
 <view>
   <view class="my-user">
     <view class="user">
-          <image class="user-img" src="{{userInfo.avtor}}" />
+          <image class="user-img" src="{{docInfo.imageUrl}}" />
           <view class="user-info">
-              <view class="user-num">{{userInfo.name}}</view>
-              <view class="user-desc">{{userInfo.goodAt}}</view>
+              <view class="user-num">{{docInfo.name}}</view>
+              <view class="user-desc">{{docInfo.professionalTitle}}</view>
           </view>
     </view>
   </view>
@@ -20,13 +20,13 @@
     <view class="rowBlock" a:for="{{timeRange}}" key="{{index}}" onTap="chooseTime" data-index="{{index}}">
       <view class="leftBlock">
         <view class="top">
-          <view class="rang">{{item.range}}</view>
-          <view class="not">{{item.hasNot?'有号':'此时间段无号'}}</view>
+          <view class="rang">{{item.timeType == 1 ? "上午" : "下午"}}</view>
+          <view class="not">{{item.status?'有号':'无号'}}</view>
         </view>
-        <view class="bottom">{{item.time}}</view>
+        <view class="bottom">{{item.beginTime + '-' + item.endTime}}</view>
       </view>
       <view class="rightBlock">
-        <view>{{'￥'+item.money}}</view>
+        <view>{{'￥'+item.fee}}</view>
         <view
             class="am-list-arrow">
             <am-icon type="right" 
