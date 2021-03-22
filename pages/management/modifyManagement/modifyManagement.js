@@ -104,7 +104,7 @@ Page({
   },
   onSubmit(e) {
     var userName = this.data.userInfo.name;
-    var mobile = this.data.userInfo.phoneNumber;
+    var mobile = this.data.userInfo.cellphone;
     var cardNum = this.data.userInfo.idNumber;
     if (userName.length===0) {
       my.showToast({

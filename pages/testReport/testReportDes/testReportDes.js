@@ -65,10 +65,16 @@ Page({
     //   }
     // });
 
-    // this.data.reportInfo={
+    // this.data.reportInfo=
+    // {
+    //   isFinish:true,
+    //   reportTime:"2020-12-30 14:00",
+    //   keshi:"耳鼻喉科",
+    //   inspectName:'乙肝两对半',
+    //   name:"张三",
+    //   id:0,
     //   recordId:"11-1",
     //   cardNum:"24235325436436",
-    //   userName:"张三",
     //   userSex:"男",
     //   userAge:"22",
     //   diagnosis:"正常",
@@ -88,27 +94,34 @@ Page({
     //   reportImageUrl:"https://gw.alipayobjects.com/mdn/rms_6c25e6/afts/img/A*H_rWQLPOkqwAAAAAAAAAAAAAARQnAQ",
     //   children:[
     //     {itemName:"白细胞",
-    //     txtVal:"13",
-    //     pnFlag:"NORMAL",
+    //     result:"13",
+    //     tip:"NORMAL",
     //     reference:"3.5~9.5"},
     //     {itemName:"淋巴细胞绝对值",
-    //     txtVal:"3.95",
-    //     pnFlag:"HIGH",
+    //     result:"3.95",
+    //     tip:"HIGH",
     //     reference:"3.5~9.5"},
     //     {itemName:"红细胞",
-    //     txtVal:"12.45",
-    //     pnFlag:"LOW",
+    //     result:"12.45",
+    //     tip:"LOW",
     //     reference:"3.8~5.1"}]
     // }
 },
 openPDF(){
-  my.openDocument({
-    filePath: this.data.reportInfo.url,
-    fileType: 'pdf',
-    success: (res) => {
-      console.log('open document success')
-      }
-    })
+  my.downloadFile({
+  // 示例 url，并非真实存在
+      url: this.data.reportInfo.url,
+      success({ apFilePath }) {
+        my.hideLoading();
+        my.openDocument({
+          filePath: apFilePath,
+          fileType: 'pdf',
+          success: (res) => {
+            console.log('open document success')
+            }
+          })
+        }
+      })
 },
 openIMG(){
   my.previewImage({

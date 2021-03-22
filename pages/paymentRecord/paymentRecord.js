@@ -4,7 +4,7 @@ Page({
     //   {
     //   title: '缴款记录',
     //   titleIconUrl: 'https://gw.alipayobjects.com/mdn/industry_l/afts/img/A*c1YIRJk2AvcAAAAAAAAAAABkARQnAQ',
-    //   fee: '826.00',
+    //   cost: '826.00',
     //   valueUnit: '￥',
     //   status: '缴款成功',
     //   statusColor: '#FF6010',
