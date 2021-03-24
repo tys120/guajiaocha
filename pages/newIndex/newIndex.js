@@ -85,9 +85,9 @@ Page({
   },
   onShow() {
     tracertHome.expo('c37411')
+    this.getBasic()
     this.getUserInfo()
     this.getmind()
-    this.getBasic()
     let that=this
     my.getStorage({
       key: 'default',
@@ -149,7 +149,7 @@ Page({
     // });
 
     // my.request({
-    //   url: 'https://wx.rzszyy.cn/wechat/api/patient/list',
+    //   url: 'http://39.103.166.64:9999/wechat/api/alilogin/patient/list',
     //   method: 'GET',
     //   data: {
     //     openid: str
@@ -159,6 +159,9 @@ Page({
     //     that.setData({
     //       userInfo:res.data.data
     //     })
+    //   },
+    //   headers:{
+    //     'channel':'alipay'  //默认值
     //   },
     //   fail: function(res) {
     //     my.showToast({
@@ -216,8 +219,11 @@ Page({
   },
   getBasic(){
     // my.request({
-    //   url: 'https://wx.rzszyy.cn/wechat/api/hospital/page',
+    //   url: 'http://39.103.166.64:9999/wechat/api/alilogin/hospital/page',
     //   method: 'GET',
+    //   headers:{
+    //     'channel':'alipay'  //默认值
+    //   },
     //   success: function(res) {
     //     my.setStorage({
     //      key: 'hosID',

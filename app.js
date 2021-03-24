@@ -22,32 +22,25 @@ App(Store({
       //   content: res.authCode,
       // });
       if (res.authCode) {
-      // my.request({
-      //   url: 'https://isv.com/auth', 
-      //   data: {
-      //     authcode: res.authCode,
-      //   },
-      //   success: (resp) => {
-      //     
-      //   },
-      //   fail: (resp) => {
-      //     
-      //   },
-      // });
+      my.request({
+        url: 'http://39.103.166.64:9999/wechat/api/alilogin/'+res.authCode, 
+        method:"POST",
+        headers:{
+          'content-type':'application/json', //默认值
+          'channel':'alipay'  
+        },
+        // data: {
+        //   authcode: res.authCode,
+        // },
+        success: (resp) => {
+          console.log(resp)
+        },
+        fail: (resp) => {
+          
+        },
+      });
     }
-      my.getAuthUserInfo({
-            scopes: ['auth_user'],
-            success: (res) => {
-              my.setStorage({
-                key: 'userInfo',
-                data:res
-              });
-            },
-            fail:() =>{
-              
-            }
-          });
-      console.log("authCode ",res.authCode)
+    console.log("authCode ",res.authCode)
     },
   });
   
